@@ -1,0 +1,123 @@
+@{
+    ViewBag.Title = "规则表列表";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    <div class="container-div" style="overflow-y: hidden">
+        <div class="row">
+            <div class="col-sm-12 search-collapse">
+                <form id="formId">
+                    <div class="select-list">
+                        <ul>
+                        <input type="hidden" name="StatusCode" value="true"/>
+                        <li>
+                               <p>规则名称：</p>
+                               <input type="text" name="RuleName"/>
+                        </li>
+                        <li>
+                               <p style="width:95px;">规则对应请求：</p>
+                               <input type="text" name="RuleUrl"/>
+                        </li>
+                        <li>
+                               <p>规则类别：</p>
+                               <input type="text" name="RuleType"/>
+                        </li>
+                        <li>
+                               <p>规则描述：</p>
+                               <input type="text" name="Description"/>
+                        </li>
+                        <li>
+                               <p>权重：</p>
+                               <input type="text" name="Weight"/>
+                        </li>
+                        <li>
+                                <a class="btn btn-primary btn-rounded btn-sm" onclick="$.apitable.search()">
+                                    <i class="fa fa-search"></i>&nbsp;搜索
+                                </a>
+                                <a class="btn btn-warning btn-rounded btn-sm" onclick="$.apiform.reset()">
+                                    <i class="fa fa-refresh"></i>&nbsp;重置
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+            </form>
+            </div>
+                <div class="col-sm-12 select-table table-striped">
+                    <table id="bootstrap-table" data-mobile-responsive="true" class="ico-list"></table>
+                </div>
+            </div>
+        </div>
+@section footer{ 
+    <script inline="javascript">
+    $(function () {
+        var options = {
+            method: "get",
+            uniqueId:"Id",
+            contentType: "application/json",
+            url: '/api/Rule/getlist',
+            modalName: "规则表",
+            pageSize:10,
+            singleSelect:true,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'Id',
+                    title: 'Id',
+                    visible: false
+                },
+                {
+                    field: 'RuleName',
+                    title: '规则名称',
+                    sortable: true
+                },
+                {
+                    field: 'RuleUrl',
+                    title: '规则对应请求',
+                    sortable: true
+                },
+                {
+                    field: 'RuleType',
+                    title: '规则类别',
+                    sortable: true
+                },
+                {
+                    field: 'Description',
+                    title: '错误',
+                    sortable: true
+                },
+                {
+                    field: 'ErrorDesc',
+                    title: '错误描述',
+                    sortable: true
+                },
+                {
+                    field: 'Weight',
+                    title: '权重',
+                    sortable: true
+                },
+        {
+        title: '操作',
+        align: 'center',
+        formatter: function(value, row, index) {
+                return '<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.detail(\'' + row.Id + '\')" title="详情"><i class="icon-search" style="border:none;height: 16px;width: 16px;"></i></a> ';
+            }
+        } 
+    ]
+        };
+        $.apitable.init(options);
+
+    });
+
+    function getselectkey() {
+        return $.apitable.selectColumns('Id');
+    }
+
+    function getselectvalue() {
+        return $.apitable.selectColumns('RuleName');
+    }
+
+        function getselecterrordesc() {
+        return $.apitable.selectColumns('ErrorDesc');
+    }
+    </script>
+ }

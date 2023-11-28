@@ -1,0 +1,418 @@
+[1] 2023-09-11 11:06:53 Bootstrapper Starting: 
+[1] 2023-09-11 11:06:53 App:AGSpatialDataCheck.Web
+Description:
+Version:1.0.0.0
+Company:AGSpatialDataCheck.Web
+Copyright:
+StartTime:2023/9/11 11:06:53
+Location:F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0
+MachineName:DESKTOP-R92DDN7
+
+[1] 2023-09-11 11:06:53 Environment: 
+[1] 2023-09-11 11:06:53 Environment name: dev
+[1] 2023-09-11 11:06:53 Environment IsProd: False
+[1] 2023-09-11 11:06:53 Environment IsQa: False
+[1] 2023-09-11 11:06:53 Environment IsDev: True
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter
+[1] 2023-09-11 11:06:53 Create Default Dependency Injection Container...
+[1] 2023-09-11 11:06:53 Assign Object Container: ServiceCenter.Core.Aop.Default.DefaultObjectContainer
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter, Time: 0 ms
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.Config.DefaultConfigStarter
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.Config.DefaultConfigStarter, Time: 1 ms
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter
+[1] 2023-09-11 11:06:53 Add Runtime Cache Provider...
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter, Time: 5 ms
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter
+[1] 2023-09-11 11:06:53 IdGenerateManager Register ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreator as IIdCreator[STRING]. 
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter, Time: 6 ms
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter
+[1] 2023-09-11 11:06:53 IdGenerateManager Register ServiceCenter.Core.IdGenerate.TimestampIdLongCreator as IIdCreator[LONG]. 
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter, Time: 0 ms
+[1] 2023-09-11 11:06:53 Execute Starter: ServiceCenter.Core.Data.DbContextStarter
+[1] 2023-09-11 11:06:53 Load DbContext : AGSpatiaDataCheck.Domain.SqliteDbContext
+[1] 2023-09-11 11:06:53 Registered DbContext:AGSpatiaDataCheck.Domain.SqliteDbContext(Singleton)
+[1] 2023-09-11 11:06:53 Registered ApplicationService:AGSpatiaDataCheck.Domain.FileStorageService(Transient)
+[1] 2023-09-11 11:06:53 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain.FileStorageEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain.FileStorageEntity](Transient)
+[1] 2023-09-11 11:06:53 Completed Starter: ServiceCenter.Core.Data.DbContextStarter, Time: 23 ms
+[3] 2023-09-11 11:07:00 LocalDatabaseConfigLoader Load: F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml Starting
+[3] 2023-09-11 11:07:01  ; Error ---> Message:MapperSource 中存在不正确的Type：AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain
+StackTrace:
+Source:
+
+[3] 2023-09-11 11:07:01 Load DatabaseConfig Successfully : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml 
+[3] 2023-09-11 11:07:01 
+ _____                 _____ _             _    
+|  __ \               / ____| |           | |   
+| |__) |   _ _ __ ___| (___ | |_ __ _  ___| | __
+|  ___/ | | | '__/ _ \\___ \| __/ _` |/ __| |/ /
+| |   | |_| | | |  __/____) | || (_| | (__|   < 
+|_|    \__,_|_|  \___|_____/ \__\__,_|\___|_|\_\
+
+## Pure Data ##                         (v5.0.1.RELEASE)
+                    
+
+---------------------------DatabaseConfig---------------------------
+ParameterPrefix=#{ 
+ParameterSuffix=}  
+GlobalTablePrefix=  
+ExecuteTimeout=30
+DefaultPageSize=10
+AutoDisposeConnection=True
+ValidateStopOnFirstFailure=False
+LoadMapperMode=FluentMapper
+EnableLobConverter=False
+LobConverterClassName=
+BulkOperateClassName=
+EnableDefaultPropertySecurityValidate=False
+PropertySecurityValidateClassName=
+
+EnableDebug=True
+EnableIntercept=True
+EnableLogError=True
+EnableOrmLog=True
+LogWithRawSql=True
+CategoryLogType=False
+OrmLogsPath=F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\logs
+MaxServerLogSize=12000
+
+EnableOrmCache=False
+CacheOrmTime=60
+CacheOrmSingleTime=60
+OrmCacheCheckPeriod=5
+
+EnableSqlMap=True
+NameSpacePrefix=AGSpatiaDataCheck.Domain.
+CanUpdatedWhenTableExisted=True
+FormatSql=True
+IsWatchSqlMapFile=True
+WatchSqlMapInterval=3000
+SqlMapDirPaths=Data
+SqlMapFilePaths=
+
+AutoMigrate=True
+AutoRemoveUnuseColumnInTable=True
+EnableAutoMigrateLog=False
+EnableAutoMigrateDebug=True
+AutoMigrateOnContainTable=
+AutoMigrateWithoutTable=
+EnableGlobalIgnoreUpdatedColumns=True
+AutoFilterEmptyValueColumnsWhenTrack=True
+GlobalIgnoreUpdatedColumns=Id;Version;VersionRefId;CreateTime;CreateUser;CreateUserID
+
+Interceptors=Pure.Data.ConnectionTestIntercept;Pure.Data.OutputSQLIntercept;Pure.Data.OutputExceptionIntercept
+MappingAssemblies=
+DataSources=WriteDB_Write_1
+OutputAction=Pure.Data.OutputActionDelegate
+DbConnectionInit=
+---------------------------Finish Loading DatabaseConfig---------------------------
+[3] 2023-09-11 11:07:01 Loading SqlMap Directory: F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data
+[3] 2023-09-11 11:07:01 Loading SqlMap : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[3] 2023-09-11 11:07:01 Loaded (AGSpatiaDataCheck.Domain.FileStorageService) Successfully.
+[3] 2023-09-11 11:07:01 Loading SqlMap : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[3] 2023-09-11 11:07:01 Loaded (AGSpatiaDataCheck.Domain.FileStorageService) Successfully.
+[8] 2023-09-11 11:07:01 Watch file (AGSpatiaDataCheck.Domain.FileStorageService) changed at :F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[8] 2023-09-11 11:07:01 Watch file (AGSpatiaDataCheck.Domain.FileStorageService) changed at :F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[8] 2023-09-11 11:07:01 Watch sqlmap files finished .
+[3] 2023-09-11 11:07:01 初始化AutoMigrateHelper完成
+[3] 2023-09-11 11:07:01 开始AutoMigrate...
+[3] 2023-09-11 11:07:01 AutoMigrate完成 - 2023/9/11 11:07:01
+[24] 2023-09-11 11:07:21  ; Error ---> Message:MapperSource 中存在不正确的Type：AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain
+StackTrace:
+Source:
+
+[24] 2023-09-11 11:07:22 SELECT COUNT(1) FROM (SELECT A.id, A.filename, A.filepath, A.filesize, A.fileextension, A.filetree, A.secret, A.statuscode, A.createuser, A.createtime FROM A_File_Storage A)    (conn: 41915446, status: Closed)
+[24] 2023-09-11 11:07:22  ; Error ---> Message:PureDataException -> SqlMapStatement, Error: Pure.Data.PureDataException: PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   --- End of inner exception stack trace ---
+   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+StackTrace:   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at AGSpatiaDataCheck.Domain.FileStorageService.GetPageDataAsync(DbQueryParameter queryParameters) in F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Domain\Data\FileStorage\FileStorageService.cs:line 52
+Source:Pure.Data
+InnerException:Message:PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+StackTrace:   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+Source:Pure.Data
+InnerException:Message:SQLite Error 1: 'no such table: A_File_Storage'.
+StackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+Source:Microsoft.Data.Sqlite
+
+
+
+[1] 2023-09-11 11:16:27 Bootstrapper Starting: 
+[1] 2023-09-11 11:16:27 App:AGSpatialDataCheck.Web
+Description:
+Version:1.0.0.0
+Company:AGSpatialDataCheck.Web
+Copyright:
+StartTime:2023/9/11 11:16:26
+Location:F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0
+MachineName:DESKTOP-R92DDN7
+
+[1] 2023-09-11 11:16:27 Environment: 
+[1] 2023-09-11 11:16:27 Environment name: dev
+[1] 2023-09-11 11:16:27 Environment IsProd: False
+[1] 2023-09-11 11:16:27 Environment IsQa: False
+[1] 2023-09-11 11:16:27 Environment IsDev: True
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter
+[1] 2023-09-11 11:16:27 Create Default Dependency Injection Container...
+[1] 2023-09-11 11:16:27 Assign Object Container: ServiceCenter.Core.Aop.Default.DefaultObjectContainer
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter, Time: 0 ms
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.Config.DefaultConfigStarter
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.Config.DefaultConfigStarter, Time: 0 ms
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter
+[1] 2023-09-11 11:16:27 Add Runtime Cache Provider...
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter, Time: 2 ms
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter
+[1] 2023-09-11 11:16:27 IdGenerateManager Register ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreator as IIdCreator[STRING]. 
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter, Time: 2 ms
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter
+[1] 2023-09-11 11:16:27 IdGenerateManager Register ServiceCenter.Core.IdGenerate.TimestampIdLongCreator as IIdCreator[LONG]. 
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter, Time: 0 ms
+[1] 2023-09-11 11:16:27 Execute Starter: ServiceCenter.Core.Data.DbContextStarter
+[1] 2023-09-11 11:16:27 Load DbContext : AGSpatiaDataCheck.Domain.SqliteDbContext
+[1] 2023-09-11 11:16:27 Registered DbContext:AGSpatiaDataCheck.Domain.SqliteDbContext(Singleton)
+[1] 2023-09-11 11:16:27 Registered ApplicationService:AGSpatiaDataCheck.Domain.FileStorageService(Transient)
+[1] 2023-09-11 11:16:27 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain.FileStorageEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain.FileStorageEntity](Transient)
+[1] 2023-09-11 11:16:27 Completed Starter: ServiceCenter.Core.Data.DbContextStarter, Time: 7 ms
+[5] 2023-09-11 11:16:28 LocalDatabaseConfigLoader Load: F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml Starting
+[5] 2023-09-11 11:16:28  ; Error ---> Message:MapperSource 中存在不正确的Type：AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain
+StackTrace:
+Source:
+
+[5] 2023-09-11 11:16:28 Load DatabaseConfig Successfully : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml 
+[5] 2023-09-11 11:16:28 
+ _____                 _____ _             _    
+|  __ \               / ____| |           | |   
+| |__) |   _ _ __ ___| (___ | |_ __ _  ___| | __
+|  ___/ | | | '__/ _ \\___ \| __/ _` |/ __| |/ /
+| |   | |_| | | |  __/____) | || (_| | (__|   < 
+|_|    \__,_|_|  \___|_____/ \__\__,_|\___|_|\_\
+
+## Pure Data ##                         (v5.0.1.RELEASE)
+                    
+
+---------------------------DatabaseConfig---------------------------
+ParameterPrefix=#{ 
+ParameterSuffix=}  
+GlobalTablePrefix=  
+ExecuteTimeout=30
+DefaultPageSize=10
+AutoDisposeConnection=True
+ValidateStopOnFirstFailure=False
+LoadMapperMode=FluentMapper
+EnableLobConverter=False
+LobConverterClassName=
+BulkOperateClassName=
+EnableDefaultPropertySecurityValidate=False
+PropertySecurityValidateClassName=
+
+EnableDebug=True
+EnableIntercept=True
+EnableLogError=True
+EnableOrmLog=True
+LogWithRawSql=True
+CategoryLogType=False
+OrmLogsPath=F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\logs
+MaxServerLogSize=12000
+
+EnableOrmCache=False
+CacheOrmTime=60
+CacheOrmSingleTime=60
+OrmCacheCheckPeriod=5
+
+EnableSqlMap=True
+NameSpacePrefix=AGSpatiaDataCheck.Domain.
+CanUpdatedWhenTableExisted=True
+FormatSql=True
+IsWatchSqlMapFile=True
+WatchSqlMapInterval=3000
+SqlMapDirPaths=Data
+SqlMapFilePaths=
+
+AutoMigrate=True
+AutoRemoveUnuseColumnInTable=True
+EnableAutoMigrateLog=False
+EnableAutoMigrateDebug=True
+AutoMigrateOnContainTable=
+AutoMigrateWithoutTable=
+EnableGlobalIgnoreUpdatedColumns=True
+AutoFilterEmptyValueColumnsWhenTrack=True
+GlobalIgnoreUpdatedColumns=Id;Version;VersionRefId;CreateTime;CreateUser;CreateUserID
+
+Interceptors=Pure.Data.ConnectionTestIntercept;Pure.Data.OutputSQLIntercept;Pure.Data.OutputExceptionIntercept
+MappingAssemblies=
+DataSources=WriteDB_Write_1
+OutputAction=Pure.Data.OutputActionDelegate
+DbConnectionInit=
+---------------------------Finish Loading DatabaseConfig---------------------------
+[5] 2023-09-11 11:16:28 Loading SqlMap Directory: F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data
+[5] 2023-09-11 11:16:28 Loading SqlMap : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[5] 2023-09-11 11:16:28 Loaded (AGSpatiaDataCheck.Domain.FileStorageService) Successfully.
+[5] 2023-09-11 11:16:28 Loading SqlMap : F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[5] 2023-09-11 11:16:28 Loaded (AGSpatiaDataCheck.Domain.FileStorageService) Successfully.
+[3] 2023-09-11 11:16:28 Watch file (AGSpatiaDataCheck.Domain.FileStorageService) changed at :F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[3] 2023-09-11 11:16:28 Watch file (AGSpatiaDataCheck.Domain.FileStorageService) changed at :F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[3] 2023-09-11 11:16:28 Watch sqlmap files finished .
+[5] 2023-09-11 11:16:28 初始化AutoMigrateHelper完成
+[5] 2023-09-11 11:16:28 开始AutoMigrate...
+[5] 2023-09-11 11:16:28 AutoMigrate完成 - 2023/9/11 11:16:28
+[33] 2023-09-11 11:21:32  ; Error ---> Message:MapperSource 中存在不正确的Type：AGSpatiaDataCheck.Domain.SqliteDbContext,AGSpatiaDataCheck.Domain
+StackTrace:
+Source:
+
+[33] 2023-09-11 11:21:32 SELECT COUNT(1) FROM (SELECT A.id, A.filename, A.filepath, A.filesize, A.fileextension, A.filetree, A.secret, A.statuscode, A.createuser, A.createtime FROM A_File_Storage A)    (conn: 56913965, status: Closed)
+[33] 2023-09-11 11:21:33  ; Error ---> Message:PureDataException -> SqlMapStatement, Error: Pure.Data.PureDataException: PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   --- End of inner exception stack trace ---
+   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+StackTrace:   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at AGSpatiaDataCheck.Domain.FileStorageService.GetPageDataAsync(DbQueryParameter queryParameters) in F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Domain\Data\FileStorage\FileStorageService.cs:line 52
+Source:Pure.Data
+InnerException:Message:PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+StackTrace:   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+Source:Pure.Data
+InnerException:Message:SQLite Error 1: 'no such table: A_File_Storage'.
+StackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+Source:Microsoft.Data.Sqlite
+
+
+
+[33] 2023-09-11 11:21:52 SELECT COUNT(1) FROM (SELECT A.id, A.filename, A.filepath, A.filesize, A.fileextension, A.filetree, A.secret, A.statuscode, A.createuser, A.createtime FROM A_File_Storage A)    (conn: 56913965, status: Closed)
+[33] 2023-09-11 11:21:52  ; Error ---> Message:PureDataException -> SqlMapStatement, Error: Pure.Data.PureDataException: PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   --- End of inner exception stack trace ---
+   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+StackTrace:   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at AGSpatiaDataCheck.Domain.FileStorageService.GetPageDataAsync(DbQueryParameter queryParameters) in F:\gitStudio\AGSpatialDataCheck\AGSpatialDataCheck.Domain\Data\FileStorage\FileStorageService.cs:line 52
+Source:Pure.Data
+InnerException:Message:PureDataException -> OnExceptionInternal, Error: Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: A_File_Storage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+StackTrace:   at Pure.Data.SqlMapper.OnExceptionInternal(IDbConnection cnn, Exception exception, IDbCommand cmd, CommandDefinition command)
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+   at Pure.Data.Database.ExecuteScalarAsync(String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Pure.Data.SqlMap.SqlMapStatement.ExecutePageListAsync[T](Int32 pageIndex, Int32 pageSize, String orderText, String countSql, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+Source:Pure.Data
+InnerException:Message:SQLite Error 1: 'no such table: A_File_Storage'.
+StackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Pure.Data.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command)
+Source:Microsoft.Data.Sqlite
+
+
+

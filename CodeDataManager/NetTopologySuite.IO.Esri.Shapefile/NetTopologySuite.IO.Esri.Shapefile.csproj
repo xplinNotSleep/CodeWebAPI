@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>NetTopologySuite.IO.Esri</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/NetTopologySuite/NetTopologySuite.IO.Esri.git</RepositoryUrl>
+    <Authors>KubaSzostak, nettopologysuite-team</Authors>
+    <Description>This library provides forward-only readers and writers for Esri shapefiles.</Description>
+    <PackageProjectUrl>https://github.com/NetTopologySuite/NetTopologySuite.IO.Esri</PackageProjectUrl>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetTopologySuite.Features\NetTopologySuite.Features.csproj" />
+  </ItemGroup>
+
+
+</Project>

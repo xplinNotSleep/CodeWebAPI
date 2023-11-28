@@ -1,0 +1,62 @@
+@{
+    ViewBag.Title = "文件管理表详情";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    @Html.Raw(PureCdn.RenderCss("datetimepicker.css"))
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-FileStorage-detail">
+        <input name="Id" type="hidden"/>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">文件名:</label>
+            <div class="row-form-item-content">
+                <input name="FileName" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">文件路径:</label>
+            <div class="row-form-item-content">
+                <input name="FilePath" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">文件大小:</label>
+            <div class="row-form-item-content">
+                <input name="FileSize" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">扩展名:</label>
+            <div class="row-form-item-content">
+                <input name="FileExtension" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">上传人:</label>
+            <div class="row-form-item-content">
+                <input name="Createuser" class="form-control" type="text">
+            </div>
+        </div>
+              <div class="col-xs-12 form-group">
+                  <label class="row-form-item-label control-label">创建时间:</label>
+                  <div class="row-form-item-content">
+                       <div class="input-group date">
+                           <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                           <input name="Createtime" class="form-control" placeholder="yyyy-MM-dd" type="text">
+                       </div>
+                  </div>
+              </div>
+    </form>
+</div>
+@section footer{
+    @Html.Raw(PureCdn.RenderJs("datetimepicker.js"))
+<script inline="javascript">
+    $(function(){
+$.apioperate.get("/api/FileStorage/get/"+getRequestValue("id"), function (res) {
+        if (res.Status == rpcresponse_status.SUCCESS) {
+      $("#form-FileStorage-detail").bindForm(res.Item);
+    }})
+    $("#form-FileStorage-detail").setReadonly();
+    });
+
+</script>
+}

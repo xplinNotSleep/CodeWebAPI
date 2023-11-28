@@ -1,0 +1,38 @@
+﻿using NetTopologySuite.Geometries;
+using NetTopologySuite.IO.Esri.Shp.Readers;
+using System.IO;
+using System.Text;
+
+namespace NetTopologySuite.IO.Esri.Shapefiles.Readers
+{
+
+    /// <summary>
+    /// MultiPoint shapefile reader.
+    /// </summary>
+    public class ShapefileMultiPointReader : ShapefileReader<MultiPoint>
+    {
+
+        /// <inheritdoc/>
+        public ShapefileMultiPointReader(Stream shpStream, Stream dbfStream, ShapefileReaderOptions options = null)
+            : base(shpStream, dbfStream, options)
+        { }
+
+
+        /// <inheritdoc/>
+        public ShapefileMultiPointReader(string shpPath, ShapefileReaderOptions options = null)
+            : base(shpPath, options)
+        { }
+
+        public ShapefileMultiPointReader(string shpPath, string backFieldNames, string whereClause, Encoding Encoding)
+: base(shpPath,backFieldNames, whereClause, Encoding)
+        { }
+
+
+        internal override ShpReader<MultiPoint> CreateShpReader(Stream shpStream, ShapefileReaderOptions options)
+        {
+            return new ShpMultiPointReader(shpStream, options);
+        }
+    }
+
+
+}

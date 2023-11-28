@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = NetTopologySuite.IO.Postgis
+build_property.ProjectDir = F:\CodeDataCheck\AGSpatialDataCheck\NetTopologySuite.IO.Postgis\

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = NetTopologySuite.GdalEx
+build_property.ProjectDir = F:\CodeDataCheck\AGSpatialDataCheck\NetTopologySuite.Gdal\

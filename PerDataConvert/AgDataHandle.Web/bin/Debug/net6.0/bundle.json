@@ -1,0 +1,327 @@
+﻿{
+  "Config": {
+    "IsDev": true,
+    "IsMinify": true,
+    "EnableRenderBundle": false,
+    "IsCompress": false,
+    "ThrowWhenErrorOccur": true,
+    "RandomVersionLocation": "AfterName",
+    "RandomVersionMode": "Fix",
+    "FixRandomVersion": "v132001",
+    "WatchBundleConfig": true,
+    "WatchIntervalInMilliSecond": 5000,
+    "EnableHtmlMinify": true,
+    "EnableFullUrl": true,
+    "EnablePoweredByHttpHeaders": true,
+    "UseClientCache": true,
+    "ClientCacheDurationInSecond": 300,
+    "StaticResroucePreffix": "",
+    "StaticResrouceSuffix": ".bundle",
+    "Charset": "utf-8",
+    "CanGetCompressedRemoteResource": false,
+    "Obfuscate": false
+  },
+  "Bundles": [
+    {
+      /* 通用CSS */
+      "OutputFileName": "bundles/css/header.css",
+      "InputFiles": [
+        "~/Content/css/bootstrap.min.css",
+        "~/Content/css/font-awesome.min.css",
+        "~/Content/js/plugins/bootstrap-table/bootstrap-table.min.css",
+        "~/Content/css/animate.css",
+        "~/Content/css/icon.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/css/home_header.css",
+      "InputFiles": [
+        "~/Content/css/bootstrap.min.css",
+        "~/Content/css/jquery.contextMenu.min.css",
+        "~/Content/css/animate.css",
+        "~/Content/css/font-awesome.min.css",
+        "~/Content/css/skins.css"
+
+      ]
+    },
+    {
+      "OutputFileName": "bundles/css/header_fix.css",
+      "Option": {
+        "RefreshMode": "EveryTime",
+        "RandomVersionMode": "Fix"
+      },
+      "InputFiles": [
+        "~/Content/css/style.css",
+        "~/Content/js/plugins/lookup/lookup.css",
+        "~/Content/common/css/common-ui.css"
+        /* 富文本编辑框 */
+
+      ]
+    },
+    {
+      /* jqueryJS */
+      "OutputFileName": "bundles/js/jquery.js",
+      "InputFiles": [
+        "~/Content/js/jquery.min.js",
+        "~/Content/js/jquery.cookie.js"
+      ]
+    },
+    {
+      /* 通用JS */
+      "OutputFileName": "bundles/js/footer.js",
+      "InputFiles": [
+        "~/Content/js/bootstrap.min.js",
+        "~/Content/js/plugins/bootstrap-table/bootstrap-table.min.js",
+        "~/Content/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/columns/bootstrap-table-fixed-columns.js",
+        "~/Content/js/plugins/validate/jquery.validate.min.js",
+        "~/Content/js/plugins/validate/messages_zh.min.js",
+        "~/Content/js/plugins/validate/jquery.validate.extend.js",
+        "~/Content/js/plugins/bootstrap-treetable/bootstrap-treetable.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/export/bootstrap-table-export.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/export/tableExport.js",
+        "~/Content/js/plugins/blockUI/jquery.blockUI.js",
+        "~/Content/js/plugins/iCheck/icheck.min.js",
+        "~/Content/js/plugins/layer/layer.min.js",
+        "~/Content/js/plugins/layui/layui.js",
+        "~/Content/js/plugins/region/distpicker.data.js",
+        "~/Content/js/plugins/region/distpicker.js"
+      ]
+    },
+    {
+      /* 通用JS */
+      "OutputFileName": "bundles/js/home_footer.js",
+      "InputFiles": [
+        "~/Content/js/bootstrap.min.js",
+        "~/Content/js/plugins/metisMenu/jquery.metisMenu.js",
+        "~/Content/js/plugins/slimscroll/jquery.slimscroll.min.js",
+        "~/Content/js/jquery.contextMenu.min.js",
+        "~/Content/js/plugins/blockUI/jquery.blockUI.js",
+        "~/Content/js/plugins/layer/layer.min.js",
+        "~/Content/common/index.js",
+        "~/Content/js/plugins/fullscreen/jquery.fullscreen.js"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/footer_fix.js",
+      "Option": {
+        "RefreshMode": "EveryTime",
+        "RandomVersionMode": "Fix"
+      },
+      "InputFiles": [
+        "~/Content/js/plugins/lookup/lookup.js",
+        "~/Content/common/js/common.js",
+        "~/Content/common/js/common-ui.js"
+      ]
+    },
+    {
+      /* ztree树插件 */
+      "OutputFileName": "bundles/css/ztree.css",
+      "InputFiles": [
+        "~/Content/js/plugins/jquery-ztree/3.5/css/metro/zTreeStyle.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/ztree.js",
+      "InputFiles": [
+        "~/Content/js/plugins/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js",
+        "~/Content/js/plugins/jquery-ztree/3.5/js/selecttree.js"
+      ]
+    },
+    {
+      /* bootstrap多选下拉 */
+      "OutputFileName": "bundles/css/bootstrap-multiselect.css",
+      "InputFiles": [
+        "~/Content/js/plugins/bootstrap-multiselect/css/bootstrap-multiselect.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/bootstrap-multiselect.js",
+      "InputFiles": [
+        "~/Content/js/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"
+      ]
+    },
+    {
+      /* select2下拉框插件 */
+      "OutputFileName": "bundles/css/select2.css",
+      "InputFiles": [
+        "~/Content/js/plugins/select2/select2.min.css",
+        "~/Content/js/plugins/select2/select2-bootstrap.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/select2.js",
+      "InputFiles": [
+        "~/Content/js/plugins/select2/select2.min.js"
+      ]
+    },
+    {
+      /* bootstrap-select下拉框插件 */
+      "OutputFileName": "bundles/css/bootstrap-select.css",
+      "InputFiles": [
+        "~/Content/js/plugins/bootstrap-select/bootstrap-select.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/bootstrap-select.js",
+      "InputFiles": [
+        "~/Content/js/plugins/bootstrap-select/bootstrap-select.js"
+      ]
+    },
+    {
+      /* datetimepicker日期和时间插件 */
+      "OutputFileName": "bundles/css/datetimepicker.css",
+      "InputFiles": [
+        "~/Content/js/plugins/datapicker/bootstrap-datetimepicker.min.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/datetimepicker.js",
+      "InputFiles": [
+        "~/Content/js/plugins/datapicker/bootstrap-datetimepicker.min.js"
+      ]
+    },
+    {
+      /* ui布局插件 */
+      "OutputFileName": "bundles/css/layout-latest.css",
+      "InputFiles": [
+        "~/Content/js/plugins/jquery-layout/jquery.layout-latest.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/layout-latest.js",
+      "InputFiles": [
+        "~/Content/js/plugins/jquery-layout/jquery.layout-latest.js"
+      ]
+    },
+    {
+      /* 富文本编辑器插件 */
+      "OutputFileName": "bundles/js/ueditor.js",
+      "InputFiles": [
+        "~/Content/js/plugins/ueditor/ueditor.config.js",
+        "~/Content/js/plugins/ueditor/ueditor.all.js"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/css/cropbox.css",
+      "InputFiles": [
+        "~/Content/js/plugins/cropbox/cropbox.css"
+      ]
+    },
+    {
+      /* cropbox图像裁剪插件 */
+      "OutputFileName": "bundles/js/cropbox.js",
+      "InputFiles": [
+        "~/Content/js/plugins/cropbox/cropbox.js"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/css/jasny-bootstrap.css",
+      "InputFiles": [ "~/Content/js/plugins/jasny/jasny-bootstrap.min.css" ]
+    },
+    {
+      /* jasny功能扩展插件 */
+      "OutputFileName": "bundles/js/jasny-bootstrap.js",
+      "InputFiles": [ "~/Content/js/plugins/jasny/jasny-bootstrap.min.js" ]
+    },
+    {
+      "OutputFileName": "bundles/css/bootstrap-fileinput.css",
+      "InputFiles": [ "~/Content/js/plugins/bootstrap-fileinput/fileinput.min.css" ]
+    },
+    /* fileinput文件上传插件 */
+    {
+      "OutputFileName": "bundles/js/bootstrap-fileinput.js",
+      "InputFiles": [ "~/Content/js/plugins/bootstrap-fileinput/fileinput.js" ]
+    },
+    /* jquery-filer文件上传插件 */
+    {
+      "OutputFileName": "bundles/css/jquery-filer.css",
+      "InputFiles": [
+        "~/Content/js/plugins/jquery.filer/css/default.css",
+        "~/Content/js/plugins/jquery.filer/css/jquery.filer.css",
+        "~/Content/js/plugins/jquery.filer/css/jquery.filer-dragdropbox-theme.css",
+        "~/Content/js/plugins/jquery.filer/css/custom.css"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/js/jquery-filer.js",
+      "Option": {
+        "RefreshMode": "EveryTime",
+        "RandomVersionMode": "Fix"
+      },
+      "InputFiles": [
+        "~/Content/js/plugins/jquery.filer/js/Utility.js",
+        "~/Content/js/plugins/jquery.filer/js/jquery.filer.js"
+      ]
+    },
+    {
+      "OutputFileName": "bundles/css/fileicon.css",
+      "InputFiles": [ "~/Content/css/fileicons.css" ]
+    },
+    {
+      "OutputFileName": "bundles/js/icon.css",
+      "InputFiles": [ "~/Content/css/icon.css" ]
+    },
+    /* duallistbox双列表框插件 */
+    {
+      "OutputFileName": "bundles/css/bootstrap-duallistbox.css",
+      "InputFiles": [ "~/Content/js/plugins/duallistbox/bootstrap-duallistbox.min.css" ]
+    },
+    {
+      "OutputFileName": "bundles/js/bootstrap-duallistbox.js",
+      "InputFiles": [ "~/Content/js/plugins/duallistbox/bootstrap-duallistbox.min.js" ]
+    },
+    {
+      "OutputFileName": "bundles/js/bootstrap-suggest.js",
+      "InputFiles": [ "~/Content/js/plugins/suggest/bootstrap-suggest.min.js" ]
+    },
+    /* typeahead搜索自动补全 */
+    {
+      "OutputFileName": "bundles/js/bootstrap-typeahead.js",
+      "InputFiles": [ "~/Content/js/plugins/typeahead/bootstrap3-typeahead.min.js" ]
+    },
+    {
+      "OutputFileName": "bundles/css/jsonview.css",
+      "InputFiles": [ "~/Content/js/plugins/jsonview/jquery.jsonview.css" ]
+    },
+    /* jsonview格式化和语法高亮JSON格式数据查看插件 */
+    {
+      "OutputFileName": "bundles/js/jsonview.js",
+      "InputFiles": [ "~/Content/js/plugins/jsonview/jquery.jsonview.js" ]
+    },
+    /* jquery.steps表单向导插件 */
+    {
+      "OutputFileName": "bundles/css/jquery-steps.css",
+      "InputFiles": [ "~/Content/js/plugins/staps/jquery.steps.css" ] /* */
+    },
+    {
+      "OutputFileName": "bundles/js/jquery-steps.js",
+      "InputFiles": [ "~/Content/js/plugins/staps/jquery.steps.min.js" ]
+    },
+    /* ECharts百度统计图表插件 */
+    {
+      "OutputFileName": "bundles/js/echarts.js",
+      "InputFiles": [ "~/Content/js/plugins/report/echarts/echarts-all.js" ]
+    },
+    /* peity图表组合插件 */
+    {
+      "OutputFileName": "bundles/js/peity.js",
+      "InputFiles": [ "~/Content/js/plugins/report/peity/jquery.peity.min.js" ]
+    },
+    /* sparkline线状图插件 */
+    {
+      "OutputFileName": "bundles/js/sparkline.js",
+      "InputFiles": [ "~/Content/js/plugins/report/sparkline/jquery.sparkline.min.js" ]
+    },
+    /* 表格拖拽插件 */
+    {
+      "OutputFileName": "bundles/js/bootstrap-table-reorder.js",
+      "InputFiles": [
+        "~/Content/js/plugins/bootstrap-table/extensions/reorder/bootstrap-table-reorder.js",
+        "~/Content/js/plugins/bootstrap-table/extensions/reorder/jquery.tablednd.js"
+      ]
+    }
+  ]
+}

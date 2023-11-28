@@ -1,0 +1,91 @@
+﻿.text-lookup-label {
+    position: absolute;
+    /*right: 15px;*/
+    display: inline;
+    top: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 10px;
+    right:1%;
+}
+
+.text-lookup{
+    padding-right:28px !important;
+    resize: none;
+    overflow-x: hidden; 
+    overflow-y: hidden;
+    width:100%;
+}
+
+@media  (min-width:768px)
+{
+    .text-lookup{
+        width:94%;
+    }
+    .col-xs-12 .form-control
+    {
+        width:94%
+    }
+    .text-lookup-label
+    {
+        right:6%;
+    }
+}
+@media  (min-width:992px)
+{
+    .text-lookup{
+        width:96%;
+    }
+    .col-xs-12 .form-control
+    {
+        width:96%
+    }
+    .text-lookup-label
+    {
+        right:4%;
+    }
+}
+
+.html-lookup {
+    border: 1px solid #ccc;
+    min-height: 100px;
+    height: auto;
+    font-size: 18px;
+    padding: 2px;
+    color: #000;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.html-lookup th,.html-lookup td
+{
+     border:1px solid #000; padding: 0.3em 1em;
+}
+
+.html-lookup img
+{
+    max-width:100%
+}
+
+.html-lookup table {border-collapse: collapse;} 
+
+.text-lookup-detail {  
+    width: 100%; /*自动适应父布局宽度*/  
+    overflow: auto;  
+    word-break: break-all;  
+    padding:10px;
+    font-size: 20px;
+    /*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时，当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/  
+}
+
+
+    /*为空时显示 element attribute content*/
+.html-lookup:empty:before {
+    content: attr(placeholder);
+    color:gray
+}
+    /*焦点时内容为空*/
+.html-lookup:focus:before {
+    content: none;
+}

@@ -1,0 +1,801 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AGSpatialDataCheck.Web</name>
+    </assembly>
+    <members>
+        <member name="M:AGSpatialDataCheck.Web.Base.BaseController.GetQueryParamDictByString(System.String)">
+            <summary>
+            将获取的formData存入字典数组
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Base.HttpContextExtensions.ApplyCacheProfile(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Mvc.CacheProfile)">
+            <summary>
+            Adds the Cache-Control and Pragma HTTP headers by applying the specified cache profile to the HTTP context.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <param name="cacheProfile">The cache profile.</param>
+            <returns>The HTTP context</returns>
+            <exception cref="T:System.ArgumentNullException">context or cacheProfile.</exception>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.LayerPath">
+            <summary>
+            图层所在路径
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.LayerType">
+            <summary>
+            shp、gdb、sde
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.FeatureClassName">
+            <summary>
+            图层名称
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.WhereClause">
+            <summary>
+            过滤条件,默认为"",表示检查所有记录
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.BackFieldNames">
+            <summary>
+            返回字段名称，返回越少字段越节省内存
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.BufferDistance">
+            <summary>
+            缓冲距离，用来扩大图形,例如线或者点
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.ClusterTolerance">
+            <summary>
+            簇容差
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.FieldName">
+            <summary>
+            质检字段名
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.FieldOtherName">
+            <summary>
+            质检字段中文名,用来显示
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.ErrorDesc">
+            <summary>
+            规则错误描述
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.Value">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.InputLayer.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="T:AGSpatialDataCheck.Web.Base.MultiLayer">
+            <summary>
+            两个图层
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.MultiLayer.layer">
+            <summary>
+            第一个图层
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.MultiLayer.layer2">
+            <summary>
+            第二个图层
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Base.WebSocketHandler.SendRefresh">
+            <summary>
+            发送信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Base.WebSocketHelper.Acceptor(Microsoft.AspNetCore.Http.HttpContext,System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            创建链接
+            </summary>
+            <param name="httpContext"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Base.WebSocketHelper.RecvAsync(AGSpatialDataCheck.Web.Base.WebSocketConn,System.Threading.CancellationToken)">
+            <summary>
+            接收客户端数据
+            </summary>
+            <param name="soc">webSocket 对象</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Base.WebSocketHelper.SendAsync(AGSpatialDataCheck.Web.Base.WSMessageModel)">
+            <summary>
+            向客户端发送数据 
+            </summary>
+            <param name="message">数据</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:AGSpatialDataCheck.Web.Base.WebSocketHelper.Map(Microsoft.AspNetCore.Builder.IApplicationBuilder)" -->
+        <member name="T:AGSpatialDataCheck.Web.Base.WSMessageModel">
+            <summary>
+            消息结果
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.WSMessageModel.senderId">
+            <summary>
+            发送者Id
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.WSMessageModel.receiverId">
+            <summary>
+            接受者id
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.WSMessageModel.messageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.WSMessageModel.action">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Base.WSMessageModel.content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="T:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController">
+            <summary>
+            FileStorage控制器
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController._FileStorageService">
+            <summary>
+            控制器内服务接口
+            </summary>
+        </member>
+        <member name="F:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.UploadPath">
+            <summary>
+            上传文件夹路径
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.#ctor(AGSpatialDataCheck.Domain.FileStorageService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="OFileStorageService"></param>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.GetList(AGSpatialDataCheck.Domain.FileStorageRequestParam)">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Get(System.String)">
+            <summary>
+            根据主键获取数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Create(AGSpatialDataCheck.Domain.FileStorageEntity)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Put(System.Text.Json.JsonElement)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Patch(System.String,System.Text.Json.JsonElement)">
+            <summary>
+            部分更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.BatchUpdate(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{AGSpatialDataCheck.Domain.FileStorageEntity})">
+            <summary>
+            批量部分更新数据
+            </summary>
+            <param name="Ids"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Delete(System.String)">
+            <summary>
+            根据主键删除数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.BatchDelete(System.String)">
+            <summary>
+            根据集合批量删除数据
+            </summary>
+            <param name="Ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Upload(AGSpatialDataCheck.Domain.FileStorageRequestParam)">
+            <summary>
+            单文件上传
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.FileStorageApiController.Download(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="id"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineApiController.IsSelfIntersected(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            线自相交检查,包括封闭图形
+            </summary>
+            <param name="layer">图层</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineApiController.IsIntersected(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            同一要素类中线要素相交检查
+            </summary>
+            <param name="layer">图层</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineApiController.IsOverlap(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            同一要素类中线要素重叠检查，包括重叠、包含与被包含等
+            </summary>
+            <param name="layer">图层</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineApiController.IsHang(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            同一要素类中线要素是否为孤立线
+            </summary>
+            <param name="layer">图层</param>
+            <returns>有悬挂端点的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineApiController.IsMultipart(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            检查线要素是否具有多部件
+            </summary>
+            <param name="layer">图层</param>
+            <returns>有悬挂端点的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineToLineApiController.IsIntersected(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            线要素类与其他线要素类中的要素相交检查
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineToLineApiController.IsCovered(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            线要素是否被线要素覆盖
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.LineToPolygonApiController.IsIntersected(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            线要素类与面要素类中的要素相交检查
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointApiController.IsOverlap(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            点重叠检查
+            </summary>
+            <param name="layer">图层</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToLineApiController.IsSingleLine(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            线要素是否与点要素有关联(孤立管线检测)
+            </summary>
+            <param name="multiLayer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToLineApiController.IsSinglePoint(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            点要素是否与线要素有关联(孤立管点检测)
+            </summary>
+            <param name="multiLayer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToLineApiController.IsCovered(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            点要素是否被线要素覆盖
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToLineApiController.IsOnLine(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            点要素不能在线上检查
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToPointApiController.IsOverlap(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            点要素类中要素是否与其他要素类中要素重叠或相交
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PointToPolygonApiController.IsOverlap(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            点要素类中要素是否与其他要素类中要素重叠或相交
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PolygonApiController.IsIntersected(AGSpatialDataCheck.GISUtils.CheckParams.CheckLayer)">
+            <summary>
+            同一要素类中面要素相交检查
+            </summary>
+            <param name="layer">图层</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PolygonToPolygonApiController.IsOverlap(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            判断两个面要素类中是否有相互重叠的要素（包括包含与被包含，不包括接边）
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PolygonToPolygonApiController.HasGap(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            判断两个面要素类是否具有空隙
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PolygonToPolygonApiController.IsCovered(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            判断两个面要素类是否是相互覆盖的要素
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PolygonToPolygonApiController.IsCoincided(AGSpatialDataCheck.GISUtils.CheckParams.MultiSdeLayer)">
+            <summary>
+            多个面合并后是否与某个面重合
+            </summary>
+            <param name="multiLayer">两个图层,第一个为关注图层</param>
+            <returns>相交的要素</returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsUniqueValueExist(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查标识字段值是否存在空值
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsGuidUnique(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查标识字段值是否唯一
+            </summary>
+            <param name="field">核查字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValueUnique(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查字段值是否唯一
+            </summary>
+            <param name="field">核查字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValueExist(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查字段值是否为空
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValueNotExist(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查字段值是否不为空（字段值必须为空，不为空则为错误）
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsEffectiveCoding(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查属性值是否符合规则
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsNumValueInRange(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查数值型属性值是否在区间范围内
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsStrValueInRange(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查字符型属性值是否在区间范围内
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValidDate(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            数据库表中字符型日期字段(年月日)是否为合法的日期（如2019-01-01)
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValidYear(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            是否为合法的年份（如2019),暂无年份范围
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValidYearCompared(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            与其他日期比较后，判断逻辑上是否为合法的年份（如2019),可为逗号分隔的多个年份
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValidYearMonth(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            字符型年月是否为合法的年月
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsValidDateCompared(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            日期(年月日)字段值与其他日期比较后，逻辑上是否为合法的日期（如桥梁建成日期不能超过调查时间),还未完全实现
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsEffectiveIDCard(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查身份证是否有效，返回不合法的身份证记录信息
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.PropertyApiController.IsEffectiveValue(AGSpatialDataCheck.GISUtils.CheckParams.CheckField)">
+            <summary>
+            检查是否为有效的字段值,返回的是与所给值（这些值实际是不合符要求的）相同的记录信息
+            </summary>
+            <param name="field">图层属性</param>
+            <returns></returns>
+        </member>
+        <member name="T:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController">
+            <summary>
+            Rule控制器
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController._RuleService">
+            <summary>
+            控制器内服务接口
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.#ctor(AGSpatialDataCheck.Domain.RuleService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="ORuleService"></param>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.GetList(AGSpatialDataCheck.Domain.RuleRequestParam)">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Get(System.String)">
+            <summary>
+            根据主键获取数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Create(AGSpatialDataCheck.Domain.RuleEntity)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Put(System.Text.Json.JsonElement)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Patch(System.String,System.Text.Json.JsonElement)">
+            <summary>
+            部分更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.BatchUpdate(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{AGSpatialDataCheck.Domain.RuleEntity})">
+            <summary>
+            批量部分更新数据
+            </summary>
+            <param name="Ids"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Delete(System.String)">
+            <summary>
+            根据主键删除数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.BatchDelete(System.String)">
+            <summary>
+            根据集合批量删除数据
+            </summary>
+            <param name="Ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.GetTemplate">
+            <summary>
+            根据导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Import">
+            <summary>
+            导入模板数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.RuleApiController.Export(AGSpatialDataCheck.Domain.RuleRequestParam)">
+            <summary>
+            导出表格数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController">
+            <summary>
+            Scheme控制器
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController._SchemeService">
+            <summary>
+            控制器内服务接口
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.#ctor(AGSpatialDataCheck.Domain.SchemeService,AGSpatialDataCheck.Domain.SchemeRuleService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="OSchemeService"></param>
+            <param name="OSchemeRuleService"></param>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.GetList(AGSpatialDataCheck.Domain.SchemeRequestParam)">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Get(System.String)">
+            <summary>
+            根据主键获取数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Create(AGSpatialDataCheck.Domain.SchemeEntity)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Put(System.Text.Json.JsonElement)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Patch(System.String,System.Text.Json.JsonElement)">
+            <summary>
+            部分更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.BatchUpdate(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{AGSpatialDataCheck.Domain.SchemeEntity})">
+            <summary>
+            批量部分更新数据
+            </summary>
+            <param name="Ids"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Delete(System.String)">
+            <summary>
+            根据主键删除数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.BatchDelete(System.String)">
+            <summary>
+            根据集合批量删除数据
+            </summary>
+            <param name="Ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.GetTemplate">
+            <summary>
+            根据导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Import">
+            <summary>
+            导入模板数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.Export(AGSpatialDataCheck.Domain.SchemeRequestParam)">
+            <summary>
+            导出表格数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeApiController.BeginZhiJian(System.String)">
+            <summary>
+            开始质检
+            </summary>
+            <param name="SchemeId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController">
+            <summary>
+            SchemeRule控制器
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController._SchemeRuleService">
+            <summary>
+            控制器内服务接口
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.#ctor(AGSpatialDataCheck.Domain.SchemeRuleService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="OSchemeRuleService"></param>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.GetList(AGSpatialDataCheck.Domain.SchemeRuleRequestParam)">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.Get(System.String)">
+            <summary>
+            根据主键获取数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.Create(AGSpatialDataCheck.Domain.SchemeRuleEntity)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.Put(System.Text.Json.JsonElement)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.Patch(System.String,System.Text.Json.JsonElement)">
+            <summary>
+            部分更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.BatchUpdate(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{AGSpatialDataCheck.Domain.SchemeRuleEntity})">
+            <summary>
+            批量部分更新数据
+            </summary>
+            <param name="Ids"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.Delete(System.String)">
+            <summary>
+            根据主键删除数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.Controllers.Api.SchemeRuleApiController.BatchDelete(System.String)">
+            <summary>
+            根据集合批量删除数据
+            </summary>
+            <param name="Ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.GdalConfiguration.#cctor">
+            <summary>
+            Construction of Gdal/Ogr
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.GdalConfiguration.Usable">
+            <summary>
+            Gets a value indicating if the GDAL package is set up properly.
+            </summary>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.GdalConfiguration.ConfigureOgr">
+            <summary>
+            Method to ensure the static constructor is being called.
+            </summary>
+            <remarks>Be sure to call this function before using Gdal/Ogr/Osr</remarks>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.GdalConfiguration.ConfigureGdal">
+            <summary>
+            Method to ensure the static constructor is being called.
+            </summary>
+            <remarks>Be sure to call this function before using Gdal/Ogr/Osr</remarks>
+        </member>
+        <member name="M:AGSpatialDataCheck.Web.GdalConfiguration.GetPlatform">
+            <summary>
+            Function to determine which platform we're on
+            </summary>
+        </member>
+        <member name="P:AGSpatialDataCheck.Web.GdalConfiguration.IsWindows">
+            <summary>
+            Gets a value indicating if we are on a windows platform
+            </summary>
+        </member>
+    </members>
+</doc>

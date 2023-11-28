@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.SchemeService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<!--方案表 查询列名-->
+	<Statements>
+		<!--显示列，尽可能排除大字段列，提高效率-->
+		<Statement Id="SchemeService_ShowColumns">
+			A.id,
+			A.scheme_name,
+			A.layer_path,
+			A.layer_type,
+			A.create_time,
+			A.update_time
+		</Statement>
+	</Statements>
+</SqlMap>

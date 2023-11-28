@@ -1,0 +1,76 @@
+@{
+    ViewBag.Title = "规则表新增";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-Rule-add">
+          <div class="form-group col-xs-12 col-sm-6">
+              <label class="row-form-item-label control-label">规则名称:</label>
+              <div class="row-form-item-content">
+                  <input name="RuleName" class="form-control" type="text" required>
+              </div>
+          </div>
+          <div class="form-group col-xs-12 col-sm-6">
+              <label class="row-form-item-label control-label">规则对应请求:</label>
+              <div class="row-form-item-content">
+                  <input name="RuleUrl" class="form-control" type="text" required>
+              </div>
+          </div>
+          <div class="form-group col-xs-12 col-sm-6">
+              <label class="row-form-item-label control-label">规则类别:</label>
+              <div class="row-form-item-content">
+                     <select name="RuleType" class="form-control"></select>
+              </div>
+          </div>
+          <div class="form-group col-xs-12 col-sm-6">
+              <label class="row-form-item-label control-label">权重:</label>
+              <div class="row-form-item-content">
+                  <input name="Weight" class="form-control" type="number" required>
+              </div>
+          </div>
+         <div class="form-group col-xs-12">
+             <label class="row-form-item-label control-label">错误描述:</label>
+             <div class="row-form-item-content">
+                 <input name="ErrorDesc" class="form-control" type="text">
+             </div>
+         </div>
+          <div class="form-group col-xs-12">
+              <label class="row-form-item-label control-label">规则描述:</label>
+              <div class="row-form-item-content">
+                  <input name="Description" class="form-control" type="text">
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 form-group">
+              <label class="row-form-item-label control-label">是否启用:</label>
+              <div class="row-form-item-content">
+                   <label class="toggle-switch switch-solid">
+                       <input type="checkbox" name="StatusCode">
+                       <span></span>
+                   </label>
+              </div>
+          </div>
+    </form>
+</div>
+@section footer{
+<script inline="javascript">
+    $(function(){
+        $.apioperate.get("/api/enum/ENUM_RULE_TYPE", function (res) {
+            if (res.Status == rpcresponse_status.SUCCESS) {
+                $.each(res.Item, function (i, obj) {
+                        $('select[name="RuleType"]').append($("<option></option>").val(obj.Value).text(obj.Name));
+                });
+            }
+        });
+    });
+
+    $("#form-Rule-add").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.apioperate.save("/api/Rule/create", $('#form-Rule-add').serializeJson());
+        }
+    }
+</script>
+}

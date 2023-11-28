@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NetTopologySuite.IO.Esri.Shapefile/1.0.0": {
+        "dependencies": {
+          "NetTopologySuite.Features": "1.0.0"
+        },
+        "runtime": {
+          "NetTopologySuite.IO.Esri.Shapefile.dll": {}
+        }
+      },
+      "System.Memory/4.5.4": {},
+      "NetTopologySuite/1.0.0": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "NetTopologySuite.dll": {}
+        }
+      },
+      "NetTopologySuite.Features/1.0.0": {
+        "dependencies": {
+          "NetTopologySuite": "1.0.0"
+        },
+        "runtime": {
+          "NetTopologySuite.Features.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetTopologySuite.IO.Esri.Shapefile/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "NetTopologySuite/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetTopologySuite.Features/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

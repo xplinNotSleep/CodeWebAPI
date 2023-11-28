@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AGSpatialDataCheck.Web.props" />
+</Project>

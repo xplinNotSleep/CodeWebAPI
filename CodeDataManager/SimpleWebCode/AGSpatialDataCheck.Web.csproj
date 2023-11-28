@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<ServerGarbageCollection>false</ServerGarbageCollection>
+	<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="upload\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="upload\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="upload\**" />
+    <None Remove="logs\**" />
+    <None Remove="upload\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\TestColumn\listSelect.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="AGSpatialDataCheck.Web.xml" />
+    <None Remove="FileDb.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\MonacoEditor\Index.cshtml" />
+    <None Include="Views\UEditor\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
+    <PackageReference Include="Npgsql" Version="7.0.4" />
+    <PackageReference Include="Pure.Cdn" Version="2.0.0.4" />
+    <PackageReference Include="Pure.Cdn.Uglify" Version="2.0.0.3" />
+    <PackageReference Include="Pure.Ext" Version="3.0.0.7" />
+    <PackageReference Include="ServiceCenter.Core.Aop.Default" Version="1.0.0.5" />
+    <PackageReference Include="ServiceCenter.Core.NPOI" Version="1.0.0.8" />
+    <!--<PackageReference Include="ServiceCenter.Core.NPOI" Version="1.0.0.8" />-->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0" />
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.0" />
+	  <!--C++编译的项目（GDAL）需要在主项目里也增加包引用，原因不详-->
+	<PackageReference Include="GDAL" Version="3.7.1" />
+	<PackageReference Include="GDAL.Native" Version="3.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AGSpatialDataCheck.GISUtils\AGSpatialDataCheck.GISUtils.csproj" />
+  </ItemGroup>
+
+</Project>

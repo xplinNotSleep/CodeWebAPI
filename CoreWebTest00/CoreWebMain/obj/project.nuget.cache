@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "m3PqP0CETXWQnK1jS8sMEc8SxbdyYjXej4/u8eQ/O2Tr21MqmKj+8fK74Mk/vMs2h6LnnPHwIwbb0p5OXqKwrQ==",
+  "success": true,
+  "projectFilePath": "F:\\CodeDataCheck\\CoreWebTest00\\CoreWebMain\\CoreWebMain.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "正在通过 “HTTP” 源“http://172.18.80.203:8000/nuget”运行“restore”操作。将来的版本中将删除非 HTTPS 访问权限。请考虑迁移到 “HTTPS” 源。"
+    }
+  ]
+}

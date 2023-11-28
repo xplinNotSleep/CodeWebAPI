@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "MSolnKrA5aVbS4d0LYzSZDNsb65O8vTjtcxjR6J8wVUhloCUrVPZ/cldR7DSBUsXWUSYA4ZenaoZl4pXTlVvWA==",
+  "success": true,
+  "projectFilePath": "F:\\CodeDataCheck\\CodeDataManager\\NetTopologySuite.Features\\NetTopologySuite.Features.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "正在通过 “HTTP” 源“http://172.18.80.203:8000/nuget”运行“restore”操作。将来的版本中将删除非 HTTPS 访问权限。请考虑迁移到 “HTTPS” 源。"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PureDataConfiguration xmlns="http://PureData.net/schemas/PureDataConfiguration.xsd">
+	<Settings>
+		<!--sqlmap中的参数前缀-->
+		<ParameterPrefix>#{</ParameterPrefix>
+		<!--sqlmap中的参数后缀-->
+		<ParameterSuffix>}</ParameterSuffix>
+		<ExecuteTimeout>30</ExecuteTimeout>
+		<DefaultPageSize>10</DefaultPageSize>
+		<AutoDisposeConnection>true</AutoDisposeConnection>
+		<ValidateStopOnFirstFailure>false</ValidateStopOnFirstFailure>
+		<!--加载Mapper 的模式: 1：fluent mapper ， 2：Attribute  ， 3：sql map-->
+		<LoadMapperMode>FluentMapper</LoadMapperMode>
+		<EnableLobConverter>false</EnableLobConverter>
+		<LobConverterClassName></LobConverterClassName>
+
+		
+		<EnableDebug>true</EnableDebug>
+		<!--是否开启前端调试注入-->
+		<EnableProfiler>true</EnableProfiler>
+		<!--是否启用sql执行内部注入-->
+		<EnableIntercept>true</EnableIntercept>
+		<!--是否启用错误日志输出-->
+		<EnableLogError>true</EnableLogError>
+		<!--是否启用自定义日志输出-->
+		<EnableOrmLog>true</EnableOrmLog>
+		<!--是否用原始格式化SQL输出到日志-->
+		<LogWithRawSql>true</LogWithRawSql>
+		<!--是否按日志类型保存日志文件-->
+		<CategoryLogType>false</CategoryLogType>
+		<!--自定义日志输出路径-->
+		<OrmLogsPath></OrmLogsPath>
+		<!--最大日志大小，超过则新建-->
+		<MaxServerLogSize>12000</MaxServerLogSize>
+
+		<EnableOrmCache>false</EnableOrmCache>
+		<CacheOrmTime>60</CacheOrmTime>
+		<CacheOrmSingleTime>60</CacheOrmSingleTime>
+		<OrmCacheCheckPeriod>5</OrmCacheCheckPeriod>
+		
+		<!--是否可以使用sqlmap方式-->
+		<EnableSqlMap>true</EnableSqlMap>
+		<!--是否启用SQL格式化-->
+		<FormatSql>true</FormatSql>
+		<!--是否监听sqlmap配置文件-->
+		<IsWatchSqlMapFile>true</IsWatchSqlMapFile>
+		<!--mapper名字空间前缀-->
+		<NameSpacePrefix>AgDataHandle.Domain.</NameSpacePrefix>
+		<WatchSqlMapInterval>3000</WatchSqlMapInterval>
+
+		<!--是否开启自动构建数据库选项-->
+		<AutoMigrate>true</AutoMigrate>
+		<AutoRemoveUnuseColumnInTable>true</AutoRemoveUnuseColumnInTable>
+		<!--是否启用自动构建数据库日志-->
+		<EnableAutoMigrateLog>false</EnableAutoMigrateLog>
+		<EnableAutoMigrateDebug>true</EnableAutoMigrateDebug>
+		<!--表存在时是否更新-->
+		<CanUpdatedWhenTableExisted>true</CanUpdatedWhenTableExisted>
+		<!--开启自动构建后，空默认所有表，配置了的表会自动构建，多个用分号隔开-->
+		<AutoMigrateOnContainTable></AutoMigrateOnContainTable>
+		<!--开启自动构建后，空默认无，否则会忽略配置的表不创建，多个用分号隔开-->
+		<AutoMigrateWithoutTable></AutoMigrateWithoutTable>
+		<EnableGlobalIgnoreUpdatedColumns>true</EnableGlobalIgnoreUpdatedColumns>
+		<AutoFilterEmptyValueColumnsWhenTrack>true</AutoFilterEmptyValueColumnsWhenTrack>
+		<!--所有表中忽略的更新的字段-->
+		<GlobalIgnoreUpdatedColumns>Id;Version;VersionRefId;CreateTime;CreateUser;CreateUserID</GlobalIgnoreUpdatedColumns>
+
+		<EnableCodeGen>false</EnableCodeGen>
+		<CodeGenClassNameMode>UpperAll</CodeGenClassNameMode>
+		<CodeGenProjectName>MyCodeGen</CodeGenProjectName>
+		<CodeGenNameSpace>MyCodeGen.Test</CodeGenNameSpace>
+		<CodeGenTableFilter>A_;B_;T_;TB_</CodeGenTableFilter>
+	</Settings>
+
+  <DataSources >
+    <!--<DataSource Name="fileservice"  ConnectionString="user id=fileservice;password=fileservice;data source=192.168.30.236/orcl"   Provider="Oracle.ManagedDataAccess.Client"
+                      IsMaster="true" ParameterPrefix=":" Type="Write" Weight="20"  />-->
+	  <!--<DataSource Name="writedb"   ConnectionString="Server=139.9.2.29;Port=5432;Database=postgres;Uid=postgres;Pwd=postgres123;" Provider="Npgsql"
+ IsMaster="true" ParameterPrefix=":" Type="Write" Weight="20"  />-->
+    <!--<DataSource Name="WriteDB"  ConnectionString="Database=mysql;server=192.168.6.52;port=3306;userid=mysql;pwd=123456;sslmode=none"  Provider="MySql.Data.MySqlClient"
+              IsMaster="true"  ParameterPrefix="?" Type="Write" Weight="100"     />-->
+	<DataSource Name="WriteDB"  ConnectionString="Data Source=FileDb.db" Provider="Microsoft.Data.SQLite" IsMaster="true"  ParameterPrefix=":" Type="Write" Weight="1"  />
+  </DataSources>
+
+  <MapperSources>
+    <MapperSource Type="ClassType" ClassName="AgDataHandle.Domain.FILEDbContext,AgDataHandle.Domain"></MapperSource>
+  </MapperSources>
+
+
+  <SqlMaps>
+    <SqlMap Type="Directory"  Path="Data" ></SqlMap>    
+  </SqlMaps>
+
+  <Interceptors>
+    <Interceptor Type="ConnectionInterceptor" AssemblyName="Pure.Data" ClassFullName="Pure.Data.ConnectionTestIntercept" ></Interceptor>
+    <Interceptor Type="ExecutingInterceptor" AssemblyName="Pure.Data" ClassFullName="Pure.Data.OutputSQLIntercept" ></Interceptor>
+    <Interceptor Type="ExceptionInterceptor" AssemblyName="Pure.Data" ClassFullName="Pure.Data.OutputExceptionIntercept" ></Interceptor>
+  </Interceptors>
+ 
+
+</PureDataConfiguration>

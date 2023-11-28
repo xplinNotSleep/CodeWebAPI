@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AGSpatialDataCheck.Web
+build_property.RootNamespace = AGSpatialDataCheck.Web
+build_property.ProjectDir = F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/FileStorage/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVN0b3JhZ2VcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/FileStorage/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVN0b3JhZ2VcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/FileStorage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVN0b3JhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/FileStorage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVN0b3JhZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Home/main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/LayoutPageCommon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0UGFnZUNvbW1vbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/MonacoEditor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uYWNvRWRpdG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Rule/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVsZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Rule/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVsZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Rule/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVsZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Rule/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Rule/listSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVsZVxsaXN0U2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/SchemeRule/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lUnVsZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/SchemeRule/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lUnVsZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/SchemeRule/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lUnVsZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/SchemeRule/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lUnVsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Scheme/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Scheme/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Scheme/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Scheme/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/Scheme/listSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXGxpc3RTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CodeDataCheck/AGSpatialDataCheck/AGSpatialDataCheck.Web/Views/UEditor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUVkaXRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net6.0;net472</TargetFrameworks>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Version>1.0.2.1</Version>
+	  <Company>AugurIT</Company>
+	  <Product>AgCIM Studio</Product>
+	  <Copyright>AugurIT</Copyright>
+	  <PackageReleaseNotes>新增MatrixBuilder</PackageReleaseNotes>
+	  <Description>AgCIM Studio旗下的数学计算工具类</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Math\NumberBase.cs" />
+    <Compile Remove="Math\Vector2d.cs" />
+    <Compile Remove="Math\Vector2Int.cs" />
+    <Compile Remove="Math\Vector3d.cs" />
+    <Compile Remove="Math\Vector3Int.cs" />
+    <Compile Remove="Math\Vector4d.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.NetCore" Version="1.8.10" />
+    <PackageReference Include="MathNet.Numerics" Version="4.15.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

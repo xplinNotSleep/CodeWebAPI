@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.RuleService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+<!--规则表 查询列名-->
+    <Statements>
+		<!--显示列，尽可能排除大字段列，提高效率-->
+        <Statement Id="RuleService_ShowColumns">
+			A.id,
+			A.rule_name,
+			A.rule_url,
+			A.rule_type,
+			A.description,
+			A.weight,
+			A.error_desc,
+			A.status_code,
+			A.create_time,
+			A.update_time
+		</Statement>
+	</Statements>
+</SqlMap>

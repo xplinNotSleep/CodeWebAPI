@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet"
+          data-name="vs/editor/editor.main"
+          href="Content/js/plugins/monaco-editor/min/vs/editor/editor.main.css" />
+</head>
+<body>
+    <div id="container" style="width:100%;min-height:1000px;"></div>
+    <script>
+        var require = { paths: { vs: 'Content/js/plugins/monaco-editor/min/vs' } };
+    </script>
+    <script src="Content/js/plugins/monaco-editor/min/vs/loader.js"></script>
+    <script src="Content/js/plugins/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+    <script src="Content/js/plugins/monaco-editor/min/vs/editor/editor.main.js"></script>
+    <script>
+                var editor = monaco.editor.create(document.getElementById('container'), {
+                    language: getLanguage("language")
+                });
+                editor.setValue(getValue())
+                function getValue()
+                {
+                    return editor.getValue();
+                }
+
+                function setValue(text,isreadonly)
+                {
+                    editor.trigger('anyString', 'editor.action.formatDocument')
+                    editor.setValue(text);
+                }
+
+          function getLanguage(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return "javascript";
+        }
+    </script>
+</body>
+</html>

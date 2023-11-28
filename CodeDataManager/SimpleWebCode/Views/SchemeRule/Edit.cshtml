@@ -1,0 +1,170 @@
+@{
+    ViewBag.Title = "方案规则表编辑";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-SchemeRule-edit">
+           <input name="Id" type="hidden"/>
+           <input name="SchemeId" type="hidden">
+           <input name="SchemeName" type="hidden">
+             <div class="col-xs-12 col-sm-6 form-group">
+                 <label class="row-form-item-label control-label">规则名称:</label>
+                 <div class="input-group row-form-item-content">
+                     <input name="RuleId" type="hidden">
+                     <input type="text" name="RuleName" class="form-control bg-gray"
+                            aria-describedby="basic-addon2" readonly="readonly">
+                     <span class="input-group-btn">
+                     <button class="btn btn-default" type="button" id="btnSelectRuleId">选择</button>
+                      </span>
+                 </div>
+             </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">图层名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="LayerName" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">返回值字段:</label>
+                        <div class="row-form-item-content">
+                            <input name="BackFieldNames" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">质检唯一字段:</label>
+                        <div class="row-form-item-content">
+                            <input name="UniqueFieldName" class="form-control" type="text">
+                        </div>
+                    </div>
+                      <div class="form-group col-xs-12">
+                          <label class="row-form-item-label control-label">额外参数:</label>
+                          <div class="row-form-item-content">
+                              <textarea rows="5" class="form-control text-lookup" language="json" name="ExtraData"></textarea>
+                          </div>
+                      </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">图层名称2:</label>
+                        <div class="row-form-item-content">
+                            <input name="LayerName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">返回值字段2:</label>
+                        <div class="row-form-item-content">
+                            <input name="BackFieldNames2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">质检唯一字段2:</label>
+                        <div class="row-form-item-content">
+                            <input name="UniqueFieldName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                      <div class="form-group col-xs-12">
+                          <label class="row-form-item-label control-label">额外参数2:</label>
+                          <div class="row-form-item-content">
+                              <textarea rows="5" class="form-control text-lookup" language="json" name="ExtraData2"></textarea>
+                          </div>
+                      </div>              .
+                    <div class="form-group col-xs-12">
+                        <label class="row-form-item-label control-label">错误描述:</label>
+                        <div class="row-form-item-content">
+                            <input name="ErrorDesc" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段1名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldName" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段1中文名:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldCN" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段2名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段2中文名:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldCN2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">最小值:</label>
+                        <div class="row-form-item-content">
+                            <input name="MinValue" class="form-control" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">最大值:</label>
+                        <div class="row-form-item-content">
+                            <input name="MaxValue" class="form-control" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">参考值:</label>
+                        <div class="row-form-item-content">
+                            <input name="ParamValue" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">参考范围值:</label>
+                        <div class="row-form-item-content">
+                            <input name="ParamValues" class="form-control" type="text">
+                        </div>
+                    </div>
+              <div class="col-xs-12 col-sm-6 form-group">
+                  <label class="row-form-item-label control-label">是否启用:</label>
+                  <div class="row-form-item-content">
+                       <label class="toggle-switch switch-solid">
+                           <input type="checkbox" name="StatusCode">
+                           <span></span>
+                       </label>
+                  </div>
+              </div>
+    </form>
+</div>
+@section footer{
+<script inline="javascript">
+    $(function(){
+$.apioperate.get("/api/SchemeRule/get/"+getRequestValue("id"), function (res2) {
+        if (res2.Status == rpcresponse_status.SUCCESS) {
+      $("#form-SchemeRule-edit").bindForm(res2.Item);
+                   $('#btnSelectSchemeId').click(function () {
+                       parent.$.modal.open("选择${comment}", "/Scheme/listselect", "60%", "", 2, function (index, layero) {
+                           var iframeWin = layero.find('iframe')[0];
+                           $("input[name='SchemeId']").val(iframeWin.contentWindow.getselectkey());
+                          $("input[name='SchemeName']").val(iframeWin.contentWindow.getselectvalue());
+                           parent.layer.close(index);
+                       });
+                   });
+                   $('#btnSelectRuleId').click(function () {
+                       parent.$.modal.open("选择${comment}", "/Rule/listselect", "60%", "", 2, function (index, layero) {
+                           var iframeWin = layero.find('iframe')[0];
+                           $("input[name='RuleId']").val(iframeWin.contentWindow.getselectkey());
+                          $("input[name='RuleName']").val(iframeWin.contentWindow.getselectvalue());
+                           parent.layer.close(index);
+                       });
+                   });
+    }});
+
+    });
+
+    $("#form-SchemeRule-edit").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.apioperate.update("/api/SchemeRule/update", $('#form-SchemeRule-edit').serializeJson());
+        }
+    }
+</script>
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.SchemeService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<Statements>
+		<Statement Id="GetData">
+			SELECT <Include RefId="SchemeService_ShowColumns" />
+			FROM a_scheme A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="SchemeName" Prepend="AND">
+					INSTR(A.scheme_name,#{SchemeName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerPath" Prepend="AND">
+					INSTR(A.layer_path,#{LayerPath})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerType" Prepend="AND">
+					A.layer_type=#{LayerType}
+				</IsNotEmpty>
+			</Dynamic>
+		</Statement>
+		<Statement Id="GetPageData">
+			SELECT <Include RefId="SchemeService_ShowColumns" />
+			FROM a_scheme A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="SchemeName" Prepend="AND">
+					INSTR(A.scheme_name,#{SchemeName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerPath" Prepend="AND">
+					INSTR(A.layer_path,#{LayerPath})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerType" Prepend="AND">
+					A.layer_type=#{LayerType}
+				</IsNotEmpty>
+			</Dynamic>
+			<OrderBy>
+				<Variable Prepend="A." Property="Sort"></Variable>
+				<Variable Prepend="{#nbsp}" Property="Order"></Variable>
+			</OrderBy>
+		</Statement>
+	</Statements>
+</SqlMap>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.SchemeRuleService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+<!--方案规则表 查询列名-->
+    <Statements>
+		<!--显示列，尽可能排除大字段列，提高效率-->
+        <Statement Id="SchemeRuleService_ShowColumns">
+			A.id,
+			A.scheme_name,
+			A.scheme_id,
+			A.rule_name,
+			A.rule_id,
+			A.layer_name,
+			A.where_clause,
+			A.back_field_names,
+			A.unique_field_name,
+			A.unique_field_cn,
+			A.layer_name2,
+			A.where_clause2,
+			A.back_field_names2,
+			A.unique_field_name2,
+			A.unique_field_cn2,
+			A.error_desc,
+			A.min_value,
+			A.max_value,
+			A.param_value,
+			A.param_values,
+			A.status_code,
+			A.create_time,
+			A.update_time
+		</Statement>
+	</Statements>
+</SqlMap>

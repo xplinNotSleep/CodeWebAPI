@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AgDataHandle.Maths</id>
+    <version>1.0.2.1</version>
+    <authors>AgDataHandle.Maths</authors>
+    <description>AgCIM Studio旗下的数学计算工具类</description>
+    <releaseNotes>新增MatrixBuilder</releaseNotes>
+    <copyright>AugurIT</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="BouncyCastle.NetCore" version="1.8.10" exclude="Build,Analyzers" />
+        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CSharp" version="4.7.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="BouncyCastle.NetCore" version="1.8.10" exclude="Build,Analyzers" />
+        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CSharp" version="4.7.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\AgDataHandle.Maths.dll" target="lib\net472\AgDataHandle.Maths.dll" />
+    <file src="F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net6.0\AgDataHandle.Maths.dll" target="lib\net6.0\AgDataHandle.Maths.dll" />
+  </files>
+</package>

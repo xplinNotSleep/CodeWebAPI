@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" href="@Url.Content("~/Content/bear.svg")">
+    <link rel="shortcut icon" href="@Url.Content("~/Content/bear.svg")">
+    <title>地下市政基础设施综合管理</title>
+    @Html.Raw(PureCdn.RenderCss("home_header.css"))
+    @Html.Raw(PureCdn.RenderCss("header_fix.css"))
+    @Html.Raw(PureCdn.RenderJs("jquery.js"))
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg theme-dark skin-blue" style="overflow: hidden">
+    <div id="wrapper">
+
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close">
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="logo" style="background-color: #1f81f2bf">
+                        <span class="logo-lg">地下市政基础设施综合管理</span>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">文件管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in">
+                            <li><a class="menuItem" href="@Url.Action("Index","FileStorage")">文件列表</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">质检管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in">
+                            <li><a class="menuItem" href="@Url.Action("Index","Scheme")">方案列表</a></li>
+                            <li><a class="menuItem" href="@Url.Action("Index","rule")">规则列表</a></li>
+                        </ul>
+                    </li>
+                <li>
+                    <a href="#"><span class="nav-label">二次开发</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                        <li><a class="menuItem" href="/swagger">接口查看</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0; background-color:#1f81f2">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2" style="color:#FFF;" href="#" title="收起菜单">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right welcome-message">
+                    <li><a title="全屏显示" href="javascript:void(0)" id="fullScreen"><i class="fa fa-arrows-alt"></i> 全屏显示</a></li>
+                    <li class="dropdown user-menu">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-hover="dropdown">
+                            <span class="hidden-xs">系统配置</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="mt5">
+                                <a class="menuItem">
+                                    <i class="fa fa-user"></i> 个人中心
+                                </a>
+                            </li>
+                            <li class="mt5">
+                                <a class="menuItem">
+                                    <i class="fa fa-user"></i> AgCIM Server配置
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="resetPwd()" class="menuItem">
+                                    <i class="fa fa-key"></i> 修改密码
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-sign-out"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active menuTab" data-id="/home/main">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="fa fa-forward"></i>
+            </button>
+            <a href="#" class="roll-nav roll-right tabReload"><i class="fa fa-refresh"></i> 刷新</a>
+        </div>
+
+        <a id="ax_close_max" class="ax_close_max" href="#" title="关闭全屏"> <i class="fa fa-times-circle-o"></i> </a>
+
+        <div class="row mainContent" id="content-main">
+            <iframe class="common_iframe" name="iframeMain" width="100%" height="100%" data-id="/home/main"
+                    src="@Url.Action("main")" frameborder="0" seamless></iframe>
+        </div>
+        <div class="footer">
+            <div class="pull-right">Copyright © 2021 All Rights Reserved  </div>
+        </div>
+    </div>
+    <!--右侧部分结束-->
+</div>
+    <!-- 全局js -->
+    @Html.Raw(PureCdn.RenderJs("home_footer.js"))
+    @Html.Raw(PureCdn.RenderJs("footer_fix.js"))
+
+</body>
+</html>

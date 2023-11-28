@@ -1,0 +1,174 @@
+@{
+    ViewBag.Title = "方案规则表列表";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    @Html.Raw(PureCdn.RenderCss("fileicon.css"))
+    <div class="container-div" style="overflow-y: hidden">
+        <div class="row">
+            <div class="col-sm-12 search-collapse">
+                <form id="formId">
+                    <div class="select-list">
+                        <ul>
+                        <li>
+                         <p>规则名称：</p>
+                         <input name="RuleId" type="hidden">
+                          <input type="text" name="RuleName" class="bg-gray" aria-describedby="basic-addon2" readonly="readonly">
+                         <span class="input-group-btn" style="width: auto;display: inline-block;margin:-3px 0 0 -3px;">
+                             <button class="btn btn-default" type="button" id="btnSelectRuleId" style="width:50px;">选择</button>
+                         </span>
+                         <input type="hidden" name="SchemeId"/>
+                          <input type="hidden" name="SchemeName"/>
+                        </li>
+                        <li>
+                         <p>图层名称：</p>
+                               <input type="text" name="LayerName"/>
+                        </li>
+                        <li>
+                        <li>
+                         <p>错误描述：</p>
+                               <input type="text" name="ErrorDesc"/>
+                        </li>
+                        <li>
+                                <a class="btn btn-primary btn-rounded btn-sm" onclick="$.apitable.search()">
+                                    <i class="fa fa-search"></i>&nbsp;搜索
+                                </a>
+                                <a class="btn btn-warning btn-rounded btn-sm" onclick="$.apiform.reset()">
+                                    <i class="fa fa-refresh"></i>&nbsp;重置
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+            </form>
+            </div>
+            <div class="btn-group-sm" id="toolbar" role="group">
+                <a class="btn btn-success" onclick="$.apioperate.add('',800,700)">
+                    <i class="fa fa-plus"></i> 新增
+                </a>
+                <a class="btn btn-danger multiple disabled" onclick="$.apioperate.removeAll()">
+                    <i class="fa fa-remove"></i> 删除
+                </a>
+            </div>
+                <div class="col-sm-12 select-table table-striped">
+                    <table id="bootstrap-table" data-mobile-responsive="true" class="ico-list"></table>
+                </div>
+            </div>
+        </div>
+@section footer{ 
+    <script inline="javascript">
+    var schemeId=getRequestValue('schemeId');
+     var schemeName=getRequestValue('schemeName');
+    $(function () {
+        if(schemeId)
+        {
+           $("input[name='SchemeId']").val(schemeId);
+           $("input[name='SchemeName']").val(unescape(schemeName));
+        }
+        var options = {
+            method: "get",
+            uniqueId:"Id",
+            contentType: "application/json",
+            url: '/api/SchemeRule/getlist',
+            createUrl: '@Url.Action("Add")?schemeId='+schemeId+'&schemeName='+escape(schemeName),
+            updateUrl: '@Url.Action("Edit")?id={id}&schemeId='+schemeId+'&schemeName='+escape(schemeName),
+            detailUrl: '@Url.Action("Detail")?id={id}&schemeId='+schemeId+'&schemeName='+escape(schemeName),
+            removeUrl: '/api/SchemeRule/delete/{id}',
+            removeAllUrl:'/api/SchemeRule/batch_delete/{ids}',
+            modalName: "方案规则表",
+            pageSize:15,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'Id',
+                    title: 'Id',
+                    visible: false
+                },
+                {
+                    field: 'RuleName',
+                    title: '规则名称',
+                    sortable: true
+                },
+                {
+                    field: 'LayerName',
+                    title: '图层名称',
+                    sortable: true
+                },
+                {
+                    field: 'BackFieldNames',
+                    title: '返回值字段',
+                    sortable: true
+                },
+                {
+                    field: 'UniqueFieldName',
+                    title: '质检唯一字段',
+                    sortable: true
+                },
+                {
+                    field: 'LayerName2',
+                    title: '图层名称2',
+                    sortable: true
+                },
+                {
+                    field: 'BackFieldNames2',
+                    title: '返回值字段2',
+                    sortable: true
+                },
+                {
+                    field: 'UniqueFieldName2',
+                    title: '质检唯一字段2',
+                    sortable: true
+                },
+                {
+                    field: 'MinValue',
+                    title: '最小值',
+                    sortable: true
+                },
+                {
+                    field: 'MaxValue',
+                    title: '最大值',
+                    sortable: true
+                },
+                {
+                    field: 'ParamValue',
+                    title: '参考值',
+                    sortable: true
+                },
+                {
+                    field: 'ParamValues',
+                    title: '参考范围值',
+                    sortable: true
+                },
+                {
+                    field: 'StatusCode',
+                    title: '是否启用',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                    return '<label class="toggle-switch switch-solid"><input type="checkbox" name="StatusCode" '+(value?"checked":"")+' disabled><span></span></label>';                               
+                    }
+                },
+            {
+                title: '操作',
+                align: 'center',
+                formatter: function (value, row, index) {
+                    var actions = [];
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.edit(\'' + row.Id + '\',800,700)" title="修改"><i class="icon-edit" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.remove(\'' + row.Id + '\')" title="删除"><i class="icon-delete" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.detail(\'' + row.Id + '\',800,700)" title="详情"><i class="icon-search" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                  return actions.join('');
+                }
+            }]
+        };
+        $.apitable.init(options);
+
+               $('#btnSelectRuleId').click(function () {
+                   $.modal.open("选择rule_id", "/Rule/listselect", "80%", "", 2, function (index, layero) {
+                       var iframeWin = layero.find('iframe')[0];
+                       $("input[name='RuleId]").val(iframeWin.contentWindow.getselectkey());
+                           $("input[name='RuleName']").val(iframeWin.contentWindow.getselectvalue());
+                       layer.close(index);
+                   });
+               });
+
+    });
+</script>
+ }

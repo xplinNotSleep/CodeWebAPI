@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.SchemeRuleService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<Statements>
+		<Statement Id="GetData">
+			SELECT <Include RefId="SchemeRuleService_ShowColumns" />
+			FROM a_scheme_rule A 
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="SchemeId" Prepend="AND">
+				   A.scheme_id=#{SchemeId}
+				</IsNotEmpty>
+				<IsNotEmpty Property="RuleId" Prepend="AND">
+				   A.rule_id=#{RuleId}
+				</IsNotEmpty>
+					<IsNotEmpty Property="LayerName" Prepend="AND">
+						(INSTR(A.layer_name,#{LayerName})>0 or INSTR(A.layer_name2,#{LayerName})>0)
+					</IsNotEmpty>
+				<IsNotEmpty Property="WhereClause" Prepend="AND">
+				   A.where_clause=#{WhereClause}
+				</IsNotEmpty>
+				<IsNotEmpty Property="BackFieldNames" Prepend="AND">
+				   A.back_field_names=#{BackFieldNames}
+				</IsNotEmpty>
+					<IsNotEmpty Property="UniqueFieldName" Prepend="AND">
+					   INSTR(A.unique_field_name,#{UniqueFieldName})>0
+					</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldCn" Prepend="AND">
+				   A.unique_field_cn=#{UniqueFieldCn}
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerName2" Prepend="AND">
+				   A.layer_name2=#{LayerName2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="WhereClause2" Prepend="AND">
+				   A.where_clause2=#{WhereClause2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="BackFieldNames2" Prepend="AND">
+				   A.back_field_names2=#{BackFieldNames2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldName2" Prepend="AND">
+				   A.unique_field_name2=#{UniqueFieldName2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldCn2" Prepend="AND">
+				   A.unique_field_cn2=#{UniqueFieldCn2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="ErrorDesc" Prepend="AND">
+				   A.error_desc=#{ErrorDesc}
+				</IsNotEmpty>
+			</Dynamic>
+		</Statement>
+		<Statement Id="GetPageData">
+			SELECT <Include RefId="SchemeRuleService_ShowColumns" />
+			FROM a_scheme_rule A 
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="SchemeId" Prepend="AND">
+				   A.scheme_id=#{SchemeId}
+				</IsNotEmpty>
+				<IsNotEmpty Property="RuleId" Prepend="AND">
+				   A.rule_id=#{RuleId}
+				</IsNotEmpty>
+					<IsNotEmpty Property="LayerName" Prepend="AND">
+						(INSTR(A.layer_name,#{LayerName})>0 or INSTR(A.layer_name2,#{LayerName})>0)
+					</IsNotEmpty>
+				<IsNotEmpty Property="WhereClause" Prepend="AND">
+				   A.where_clause=#{WhereClause}
+				</IsNotEmpty>
+				<IsNotEmpty Property="BackFieldNames" Prepend="AND">
+				   A.back_field_names=#{BackFieldNames}
+				</IsNotEmpty>
+					<IsNotEmpty Property="UniqueFieldName" Prepend="AND">
+					   INSTR(A.unique_field_name,#{UniqueFieldName})>0
+					</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldCn" Prepend="AND">
+				   A.unique_field_cn=#{UniqueFieldCn}
+				</IsNotEmpty>
+				<IsNotEmpty Property="LayerName2" Prepend="AND">
+				   A.layer_name2=#{LayerName2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="WhereClause2" Prepend="AND">
+				   A.where_clause2=#{WhereClause2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="BackFieldNames2" Prepend="AND">
+				   A.back_field_names2=#{BackFieldNames2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldName2" Prepend="AND">
+				   A.unique_field_name2=#{UniqueFieldName2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="UniqueFieldCn2" Prepend="AND">
+				   A.unique_field_cn2=#{UniqueFieldCn2}
+				</IsNotEmpty>
+				<IsNotEmpty Property="ErrorDesc" Prepend="AND">
+				   A.error_desc=#{ErrorDesc}
+				</IsNotEmpty>
+			</Dynamic>
+			<OrderBy>
+				<Variable Prepend="A." Property="Sort"></Variable>
+				<Variable Prepend="{#nbsp}" Property="Order"></Variable>
+			</OrderBy>
+		</Statement>
+		<Statement Id="GetRulesByScheme">
+			select
+			C.layer_path as LayerPath,
+			C.layer_type as LayerType,
+			A.layer_name as LayerName,
+			A.where_clause as WhereCluause,
+			A.back_field_names as BackFieldNames,
+			A.unique_field_name as UniqueFieldName,
+			A.unique_field_cn as UniqueFieldCn,
+			A.layer_name2 as LayerName2,
+			A.where_clause2 as WhereCluause2,
+			A.back_field_names2 as BackFieldNames2,
+			A.unique_field_name2 as UniqueFieldName2,
+			A.unique_field_cn2 as UniqueFieldCn2,
+			A.error_desc as ErrorDesc,
+			A.min_value as MinValue,
+			A.max_value as MaxValue,
+			A.param_value as ParamValue,
+			A.param_values as ParamValues,
+			B.rule_name as RuleName,
+			B.rule_url as RuleUrl,
+			B.rule_type as RuleType,
+			B.description as Description
+			from a_scheme_rule A left join a_rule B on a.rule_id=b.id left join a_scheme c on a.scheme_id=c.id where a.scheme_id=#{SchemeId} order by B.weight
+		</Statement>
+	</Statements>
+</SqlMap>

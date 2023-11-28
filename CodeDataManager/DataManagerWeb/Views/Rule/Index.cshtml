@@ -1,0 +1,151 @@
+@{
+    ViewBag.Title = "规则表列表";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    @Html.Raw(PureCdn.RenderCss("fileicon.css"))
+    <div class="container-div" style="overflow-y: hidden">
+        <div class="row">
+            <div class="col-sm-12 search-collapse">
+                <form id="formId">
+                    <div class="select-list">
+                        <ul>
+                        <li>
+                         <p>规则名称：</p>
+                               <input type="text" name="RuleName"/>
+                        </li>
+                        <li>
+                         <p style="width:95px;">规则对应请求：</p>
+                               <input type="text" name="RuleUrl"/>
+                        </li>
+                        <li>
+                         <p>规则类别：</p>
+                               <input type="text" name="RuleType"/>
+                        </li>
+                        <li>
+                         <p>规则描述：</p>
+                               <input type="text" name="Description"/>
+                        </li>
+                        <li>
+                         <p>权重：</p>
+                               <input type="text" name="Weight"/>
+                        </li>
+                        <li style="width:140px">
+                         <p>是否启用：</p>
+                            <label class="toggle-switch switch-solid">
+                                <input type="checkbox" name="StatusCode">
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                                <a class="btn btn-primary btn-rounded btn-sm" onclick="$.apitable.search()">
+                                    <i class="fa fa-search"></i>&nbsp;搜索
+                                </a>
+                                <a class="btn btn-warning btn-rounded btn-sm" onclick="$.apiform.reset()">
+                                    <i class="fa fa-refresh"></i>&nbsp;重置
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+            </form>
+            </div>
+            <div class="btn-group-sm" id="toolbar" role="group">
+                <a class="btn btn-success" onclick="$.apioperate.add('',800,700)">
+                    <i class="fa fa-plus"></i> 新增
+                </a>
+                <a class="btn btn-danger multiple disabled" onclick="$.apioperate.removeAll()">
+                    <i class="fa fa-remove"></i> 删除
+                </a>
+                <a class="btn btn-info" onclick="$.apitable.importExcel()">
+                    <i class="fa fa-upload"></i> 导入
+                </a>
+                <a class="btn btn-warning" onclick="$.apitable.exportExcel()">
+                    <i class="fa fa-download"></i> 导出
+                </a>
+            </div>
+                <div class="col-sm-12 select-table table-striped">
+                    <table id="bootstrap-table" data-mobile-responsive="true" class="ico-list"></table>
+                </div>
+            </div>
+        </div>
+@section footer{ 
+    <script inline="javascript">
+    $(function () {
+        var options = {
+            method: "get",
+            uniqueId:"Id",
+            contentType: "application/json",
+            url: '/api/Rule/getlist',
+            createUrl: '@Url.Action("Add")',
+            updateUrl: '@Url.Action("Edit")?id={id}',
+            detailUrl: '@Url.Action("Detail")?id={id}',
+            removeUrl: '/api/Rule/delete/{id}',
+            removeAllUrl:'/api/Rule/batch_delete/{ids}',
+            importUrl: '/api/Rule/import',
+            importTemplateUrl: '/api/Rule/gettemplate',
+            exportUrl: '/api/Rule/export',
+            modalName: "规则表",
+            pageSize:15,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'Id',
+                    title: 'Id',
+                    visible: false
+                },
+                {
+                    field: 'RuleName',
+                    title: '规则名称',
+                    sortable: true
+                },
+                {
+                    field: 'RuleUrl',
+                    title: '规则对应请求',
+                    sortable: true
+                },
+                {
+                    field: 'RuleType',
+                    title: '规则类别',
+                    sortable: true
+                },
+                {
+                    field: 'Description',
+                    title: '规则描述',
+                    sortable: true
+                },
+                {
+                    field: 'ErrorDesc',
+                    title: '错误描述',
+                    sortable: true
+                },
+                {
+                    field: 'Weight',
+                    title: '权重',
+                    sortable: true
+                },
+                {
+                    field: 'StatusCode',
+                    title: '是否启用',
+                    sortable: true,
+                    formatter: function (value, row, index) {
+                    return '<label class="toggle-switch switch-solid"><input type="checkbox" name="StatusCode" '+(value?"checked":"")+' disabled><span></span></label>';                               
+                    }
+                },
+            {
+                title: '操作',
+                align: 'center',
+                formatter: function (value, row, index) {
+                    var actions = [];
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.edit(\'' + row.Id + '\',800,700)" title="修改"><i class="icon-edit" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.remove(\'' + row.Id + '\')" title="删除"><i class="icon-delete" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.detail(\'' + row.Id + '\',800,700)" title="详情"><i class="icon-search" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                  return actions.join('');
+                }
+            }]
+        };
+        $.apitable.init(options);
+
+
+    });
+</script>
+ }

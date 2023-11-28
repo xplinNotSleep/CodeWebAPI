@@ -1,0 +1,13 @@
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\AgDataHandle.Maths.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\AgDataHandle.Maths.pdb
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\BouncyCastle.Crypto.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\MathNet.Numerics.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net472\Newtonsoft.Json.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.csproj.AssemblyReference.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.GeneratedMSBuildEditorConfig.editorconfig
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.AssemblyInfoInputs.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.AssemblyInfo.cs
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.csproj.CoreCompileInputs.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.csproj.CopyComplete
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net472\AgDataHandle.Maths.pdb

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AGSpatialDataCheck.Domain.RuleService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<Statements>
+		<Statement Id="GetData">
+			SELECT <Include RefId="RuleService_ShowColumns" />
+			FROM a_rule A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="RuleName" Prepend="AND">
+					INSTR(A.rule_name,#{RuleName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="RuleUrl" Prepend="AND">
+					A.rule_url=#{RuleUrl}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="RuleType" Prepend="AND">
+					A.rule_type=#{RuleType}
+				</IsGreaterThan>
+				<IsNotEmpty Property="Description" Prepend="AND">
+					A.description=#{Description}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="Weight" Prepend="AND">
+					A.weight=#{Weight}
+				</IsGreaterThan>
+				<IsTrue Property="StatusCode" Prepend="AND">
+					A.status_code='True'
+				</IsTrue>
+			</Dynamic>
+		</Statement>
+		<Statement Id="GetPageData">
+			SELECT <Include RefId="RuleService_ShowColumns" />
+			FROM a_rule A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="RuleName" Prepend="AND">
+					INSTR(A.rule_name,#{RuleName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="RuleUrl" Prepend="AND">
+					A.rule_url=#{RuleUrl}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="RuleType" Prepend="AND">
+					A.rule_type=#{RuleType}
+				</IsGreaterThan>
+				<IsNotEmpty Property="Description" Prepend="AND">
+					A.description=#{Description}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="Weight" Prepend="AND">
+					A.weight=#{Weight}
+				</IsGreaterThan>
+				<IsTrue Property="StatusCode" Prepend="AND">
+					A.status_code='True'
+				</IsTrue>
+			</Dynamic>
+			<OrderBy>
+				<Variable Prepend="A." Property="Sort"></Variable>
+				<Variable Prepend="{#nbsp}" Property="Order"></Variable>
+			</OrderBy>
+		</Statement>
+	</Statements>
+</SqlMap>

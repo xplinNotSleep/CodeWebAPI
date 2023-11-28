@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AgDataHandle.Domain.FileStorageService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<Statements>
+		<Statement Id="GetData">
+			SELECT <Include RefId="FileStorageService_ShowColumns" />
+			FROM A_File_Storage A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="FileName" Prepend="AND">
+					INSTR(A.filename,#{FileName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="FilePath" Prepend="AND">
+					INSTR(A.filepath,#{FilePath})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="FileTree" Prepend="AND">
+					A.FileTree=#{FileTree}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="StatusCode" Prepend="AND">
+					A.statuscode=#{StatusCode}
+				</IsGreaterThan>
+			</Dynamic>
+		</Statement>
+		<Statement Id="GetPageData">
+			SELECT <Include RefId="FileStorageService_ShowColumns" />
+			FROM A_File_Storage A
+			<Dynamic Prepend="where">
+				<IsNotEmpty Property="FileName" Prepend="AND">
+					INSTR(A.filename,#{FileName})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="FilePath" Prepend="AND">
+					INSTR(A.filepath,#{FilePath})>0
+				</IsNotEmpty>
+				<IsNotEmpty Property="FileTree" Prepend="AND">
+					A.FileTree=#{FileTree}
+				</IsNotEmpty>
+				<IsGreaterThan CompareValue="0" Property="StatusCode" Prepend="AND">
+					A.statuscode=#{StatusCode}
+				</IsGreaterThan>
+			</Dynamic>
+			<OrderBy>
+				<Variable Prepend="A." Property="Sort"></Variable>
+				<Variable Prepend="{#nbsp}" Property="Order"></Variable>
+			</OrderBy>
+		</Statement>
+	</Statements>
+</SqlMap>

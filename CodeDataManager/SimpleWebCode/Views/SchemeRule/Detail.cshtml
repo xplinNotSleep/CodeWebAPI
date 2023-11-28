@@ -1,0 +1,158 @@
+@{
+    ViewBag.Title = "方案规则表详情";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    @Html.Raw(PureCdn.RenderCss("datetimepicker.css"))
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-SchemeRule-detail">
+        <input name="Id" type="hidden"/>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">规则名称:</label>
+            <div class="row-form-item-content">
+                <input name="RuleName" class="form-control" type="text">
+            </div>
+        </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">图层名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="LayerName" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">返回值字段:</label>
+                        <div class="row-form-item-content">
+                            <input name="BackFieldNames" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">质检唯一字段:</label>
+                        <div class="row-form-item-content">
+                            <input name="UniqueFieldName" class="form-control" type="text">
+                        </div>
+                    </div>
+                      <div class="form-group col-xs-12">
+                          <label class="row-form-item-label control-label">额外参数:</label>
+                          <div class="row-form-item-content">
+                              <textarea rows="5" class="form-control text-lookup" language="json" name="ExtraData"></textarea>
+                          </div>
+                      </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">图层名称2:</label>
+                        <div class="row-form-item-content">
+                            <input name="LayerName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">返回值字段2:</label>
+                        <div class="row-form-item-content">
+                            <input name="BackFieldNames2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">质检唯一字段2:</label>
+                        <div class="row-form-item-content">
+                            <input name="UniqueFieldName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                      <div class="form-group col-xs-12">
+                          <label class="row-form-item-label control-label">额外参数2:</label>
+                          <div class="row-form-item-content">
+                              <textarea rows="5" class="form-control text-lookup" language="json" name="ExtraData2"></textarea>
+                          </div>
+                      </div>
+                    <div class="form-group col-xs-12">
+                        <label class="row-form-item-label control-label">错误描述:</label>
+                        <div class="row-form-item-content">
+                            <input name="ErrorDesc" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段1名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldName" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段1中文名:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldCN" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段2名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldName2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">字段2中文名:</label>
+                        <div class="row-form-item-content">
+                            <input name="FieldCN2" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">最小值:</label>
+                        <div class="row-form-item-content">
+                            <input name="MinValue" class="form-control" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">最大值:</label>
+                        <div class="row-form-item-content">
+                            <input name="MaxValue" class="form-control" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">参考值:</label>
+                        <div class="row-form-item-content">
+                            <input name="ParamValue" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label class="row-form-item-label control-label">参考范围值:</label>
+                        <div class="row-form-item-content">
+                            <input name="ParamValues" class="form-control" type="text">
+                        </div>
+                    </div>
+              <div class="col-xs-12 col-sm-6 form-group">
+                  <label class="row-form-item-label control-label">是否启用:</label>
+                  <div class="row-form-item-content">
+                       <label class="toggle-switch switch-solid">
+                           <input type="checkbox" name="StatusCode">
+                           <span></span>
+                       </label>
+                  </div>
+              </div>
+              <div class="col-xs-12 form-group">
+                  <label class="row-form-item-label control-label">创建时间:</label>
+                  <div class="row-form-item-content">
+                       <div class="input-group date">
+                           <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                           <input name="CreateTime" class="form-control" placeholder="yyyy-MM-dd" type="text">
+                       </div>
+                  </div>
+              </div>
+              <div class="col-xs-12 form-group">
+                  <label class="row-form-item-label control-label">更新时间:</label>
+                  <div class="row-form-item-content">
+                       <div class="input-group date">
+                           <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                           <input name="UpdateTime" class="form-control" placeholder="yyyy-MM-dd" type="text">
+                       </div>
+                  </div>
+              </div>
+    </form>
+</div>
+@section footer{
+    @Html.Raw(PureCdn.RenderJs("datetimepicker.js"))
+<script inline="javascript">
+    $(function(){
+$.apioperate.get("/api/SchemeRule/get/"+getRequestValue("id"), function (res) {
+        if (res.Status == rpcresponse_status.SUCCESS) {
+      $("#form-SchemeRule-detail").bindForm(res.Item);
+    }})
+    $("#form-SchemeRule-detail").setReadonly();
+    });
+
+</script>
+}

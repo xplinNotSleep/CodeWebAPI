@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<!--<PackageReference Include="ServiceCenter.Core.Data" Version="3.0.8.6" />-->
+		<PackageReference Include="Npgsql" Version="7.0.1" />
+		<PackageReference Include="Pure.Data" Version="6.0.7.3" />
+		<!--<PackageReference Include="Pure.Data" Version="6.0.7.3" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NetTopologySuite.Features\NetTopologySuite.Features.csproj" />
+	</ItemGroup>
+
+</Project>

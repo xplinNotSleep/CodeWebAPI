@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.4" />
+		<PackageReference Include="ServiceCenter.Core" Version="2.0.5.3" />
+		<PackageReference Include="ServiceCenter.Core.Data" Version="3.0.8.6" />
+		<!--<PackageReference Include="ServiceCenter.Core.Data" Version="3.0.8.6" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Data\FileStorage\FileStorageSqlmap.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\FileStorage\FileStorageSqlMapColumn.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\Rule\RuleSqlmap.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\Rule\RuleSqlMapColumn.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\SchemeRule\SchemeRuleSqlmap.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\SchemeRule\SchemeRuleSqlMapColumn.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\Scheme\SchemeSqlmap.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Data\Scheme\SchemeSqlMapColumn.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SqliteDbContext.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Data\Rule\" />
+	  <Folder Include="Data\Scheme\" />
+	  <Folder Include="Data\SchemeRule\" />
+	</ItemGroup>
+
+</Project>

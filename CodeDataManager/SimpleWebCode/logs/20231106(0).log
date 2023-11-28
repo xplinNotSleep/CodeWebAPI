@@ -1,0 +1,168 @@
+[1] 2023-11-06 09:29:15 Bootstrapper Starting: 
+[1] 2023-11-06 09:29:15 App:AGSpatialDataCheck.Web
+Description:
+Version:1.0.0.0
+Company:AGSpatialDataCheck.Web
+Copyright:
+StartTime:2023/11/6 9:29:15
+Location:F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0
+MachineName:DESKTOP-R92DDN7
+
+[1] 2023-11-06 09:29:15 Environment: 
+[1] 2023-11-06 09:29:15 Environment name: dev
+[1] 2023-11-06 09:29:15 Environment IsProd: False
+[1] 2023-11-06 09:29:15 Environment IsQa: False
+[1] 2023-11-06 09:29:15 Environment IsDev: True
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter
+[1] 2023-11-06 09:29:15 Create Default Dependency Injection Container...
+[1] 2023-11-06 09:29:15 Assign Object Container: ServiceCenter.Core.Aop.Default.DefaultObjectContainer
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.Aop.Default.DefaultObjectContainerStarter, Time: 0 ms
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.Config.DefaultConfigStarter
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.Config.DefaultConfigStarter, Time: 1 ms
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter
+[1] 2023-11-06 09:29:15 Add Runtime Cache Provider...
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.Caching.Configuration.RuntimeCacheStarter, Time: 4 ms
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter
+[1] 2023-11-06 09:29:15 IdGenerateManager Register ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreator as IIdCreator[STRING]. 
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.IdGenerate.SnowflakeIdStringCreatorStarter, Time: 5 ms
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter
+[1] 2023-11-06 09:29:15 IdGenerateManager Register ServiceCenter.Core.IdGenerate.TimestampIdLongCreator as IIdCreator[LONG]. 
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.IdGenerate.TimestampIdLongCreatorStarter, Time: 0 ms
+[1] 2023-11-06 09:29:15 Execute Starter: ServiceCenter.Core.Data.DbContextStarter
+[1] 2023-11-06 09:29:15 Load DbContext : AGSpatialDataCheck.Domain.SqliteDbContext
+[1] 2023-11-06 09:29:15 Registered DbContext:AGSpatialDataCheck.Domain.SqliteDbContext(Singleton)
+[1] 2023-11-06 09:29:15 Registered ApplicationService:AGSpatialDataCheck.Domain.FileStorageService(Transient)
+[1] 2023-11-06 09:29:15 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.FileStorageEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.FileStorageEntity](Transient)
+[1] 2023-11-06 09:29:15 Registered ApplicationService:AGSpatialDataCheck.Domain.RuleService(Transient)
+[1] 2023-11-06 09:29:15 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.RuleEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.RuleEntity](Transient)
+[1] 2023-11-06 09:29:15 Registered ApplicationService:AGSpatialDataCheck.Domain.SchemeRuleService(Transient)
+[1] 2023-11-06 09:29:15 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.SchemeRuleEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.SchemeRuleEntity](Transient)
+[1] 2023-11-06 09:29:15 Registered ApplicationService:AGSpatialDataCheck.Domain.SchemeService(Transient)
+[1] 2023-11-06 09:29:15 Registered Repository:ServiceCenter.Core.Data.IRepositoryNoPK`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.SchemeEntity]  to ServiceCenter.Core.Data.PDRepositoryBaseCustom`2[AGSpatialDataCheck.Domain.SqliteDbContext,AGSpatialDataCheck.Domain.SchemeEntity](Transient)
+[1] 2023-11-06 09:29:15 Completed Starter: ServiceCenter.Core.Data.DbContextStarter, Time: 11 ms
+[9] 2023-11-06 09:29:19 LocalDatabaseConfigLoader Load: F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml Starting
+[9] 2023-11-06 09:29:19 Load DatabaseConfig Successfully : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\SqliteDbContext.xml 
+[9] 2023-11-06 09:29:19 
+ _____                 _____ _             _    
+|  __ \               / ____| |           | |   
+| |__) |   _ _ __ ___| (___ | |_ __ _  ___| | __
+|  ___/ | | | '__/ _ \\___ \| __/ _` |/ __| |/ /
+| |   | |_| | | |  __/____) | || (_| | (__|   < 
+|_|    \__,_|_|  \___|_____/ \__\__,_|\___|_|\_\
+
+## Pure Data ##                         (v5.0.1.RELEASE)
+                    
+
+---------------------------DatabaseConfig---------------------------
+ParameterPrefix=#{ 
+ParameterSuffix=}  
+GlobalTablePrefix=  
+ExecuteTimeout=30
+DefaultPageSize=10
+AutoDisposeConnection=True
+ValidateStopOnFirstFailure=False
+LoadMapperMode=FluentMapper
+EnableLobConverter=False
+LobConverterClassName=
+BulkOperateClassName=
+EnableDefaultPropertySecurityValidate=False
+PropertySecurityValidateClassName=
+
+EnableDebug=True
+EnableIntercept=True
+EnableLogError=True
+EnableOrmLog=True
+LogWithRawSql=True
+CategoryLogType=False
+OrmLogsPath=F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\logs
+MaxServerLogSize=12000
+
+EnableOrmCache=False
+CacheOrmTime=60
+CacheOrmSingleTime=60
+OrmCacheCheckPeriod=5
+
+EnableSqlMap=True
+NameSpacePrefix=AGSpatialDataCheck.Domain.
+CanUpdatedWhenTableExisted=True
+FormatSql=True
+IsWatchSqlMapFile=True
+WatchSqlMapInterval=3000
+SqlMapDirPaths=Data
+SqlMapFilePaths=
+
+AutoMigrate=True
+AutoRemoveUnuseColumnInTable=True
+EnableAutoMigrateLog=False
+EnableAutoMigrateDebug=True
+AutoMigrateOnContainTable=
+AutoMigrateWithoutTable=
+EnableGlobalIgnoreUpdatedColumns=True
+AutoFilterEmptyValueColumnsWhenTrack=True
+GlobalIgnoreUpdatedColumns=Id;Version;VersionRefId;CreateTime;CreateUser;CreateUserID
+
+Interceptors=Pure.Data.ConnectionTestIntercept;Pure.Data.OutputSQLIntercept;Pure.Data.OutputExceptionIntercept
+MappingAssemblies=AGSpatialDataCheck.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DataSources=WriteDB_Write_1
+OutputAction=Pure.Data.OutputActionDelegate
+DbConnectionInit=
+---------------------------Finish Loading DatabaseConfig---------------------------
+[9] 2023-11-06 09:29:19 Loading SqlMap Directory: F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\SchemeRule\SchemeRuleSqlMapColumn.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.SchemeRuleService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\SchemeRule\SchemeRuleSqlmap.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.SchemeRuleService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Scheme\SchemeSqlMapColumn.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.SchemeService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Scheme\SchemeSqlmap.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.SchemeService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Rule\RuleSqlMapColumn.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.RuleService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Rule\RuleSqlmap.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.RuleService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.FileStorageService) Successfully.
+[9] 2023-11-06 09:29:19 Loading SqlMap : F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[9] 2023-11-06 09:29:19 Loaded (AGSpatialDataCheck.Domain.FileStorageService) Successfully.
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.SchemeRuleService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\SchemeRule\SchemeRuleSqlMapColumn.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.SchemeRuleService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\SchemeRule\SchemeRuleSqlmap.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.SchemeService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Scheme\SchemeSqlMapColumn.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.SchemeService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Scheme\SchemeSqlmap.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.RuleService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Rule\RuleSqlMapColumn.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.RuleService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\Rule\RuleSqlmap.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.FileStorageService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlMapColumn.xml
+[5] 2023-11-06 09:29:19 Watch file (AGSpatialDataCheck.Domain.FileStorageService) changed at :F:\CodeDataCheck\AGSpatialDataCheck\AGSpatialDataCheck.Web\bin\Debug\net6.0\Data\FileStorage\FileStorageSqlmap.xml
+[5] 2023-11-06 09:29:19 Watch sqlmap files finished .
+[9] 2023-11-06 09:29:19 初始化AutoMigrateHelper完成
+[9] 2023-11-06 09:29:19 开始AutoMigrate...
+[9] 2023-11-06 09:29:19 CREATE TABLE a_rule_temp (id,rule_name,rule_url,rule_type,description,weight,create_time,update_time,is_topology,status_code)
+[9] 2023-11-06 09:29:19 INSERT INTO a_rule_temp SELECT id,rule_name,rule_url,rule_type,description,weight,create_time,update_time,is_topology,status_code FROM a_rule
+[9] 2023-11-06 09:29:19 DROP TABLE a_rule
+[9] 2023-11-06 09:29:19 ALTER TABLE a_rule_temp RENAME TO a_rule
+[9] 2023-11-06 09:29:19 CREATE TABLE a_rule_temp (id,rule_name,rule_url,rule_type,description,weight,create_time,update_time,status_code)
+[9] 2023-11-06 09:29:20 INSERT INTO a_rule_temp SELECT id,rule_name,rule_url,rule_type,description,weight,create_time,update_time,status_code FROM a_rule
+[9] 2023-11-06 09:29:20 DROP TABLE a_rule
+[9] 2023-11-06 09:29:20 ALTER TABLE a_rule_temp RENAME TO a_rule
+[9] 2023-11-06 09:29:20 ALTER TABLE a_rule ADD COLUMN error_desc TEXT
+[9] 2023-11-06 09:29:20 新增表【a_rule】字段【error_desc】成功
+[9] 2023-11-06 09:29:20 AutoMigrate：a_rule
+[9] 2023-11-06 09:29:20 CREATE TABLE a_scheme_rule_temp (id,scheme_name,scheme_id,rule_name,rule_id,layer_type,layer_name,where_clause,back_field_names,unique_field_name,unique_field_cn,layer_type2,layer_name2,where_clause2,back_field_names2,unique_field_name2,unique_field_cn2,error_desc,param_value,param_values,create_time,update_time,ExtraData,ExtraData2,FieldName,FieldCN,FieldName2,FieldCN2,min_value,max_value,status_code)
+[9] 2023-11-06 09:29:20 INSERT INTO a_scheme_rule_temp SELECT id,scheme_name,scheme_id,rule_name,rule_id,layer_type,layer_name,where_clause,back_field_names,unique_field_name,unique_field_cn,layer_type2,layer_name2,where_clause2,back_field_names2,unique_field_name2,unique_field_cn2,error_desc,param_value,param_values,create_time,update_time,ExtraData,ExtraData2,FieldName,FieldCN,FieldName2,FieldCN2,min_value,max_value,status_code FROM a_scheme_rule
+[9] 2023-11-06 09:29:20 DROP TABLE a_scheme_rule
+[9] 2023-11-06 09:29:20 ALTER TABLE a_scheme_rule_temp RENAME TO a_scheme_rule
+[9] 2023-11-06 09:29:20 CREATE TABLE a_scheme_rule_temp (id,scheme_name,scheme_id,rule_name,rule_id,layer_name,where_clause,back_field_names,unique_field_name,unique_field_cn,layer_name2,where_clause2,back_field_names2,unique_field_name2,unique_field_cn2,error_desc,param_value,param_values,create_time,update_time,ExtraData,ExtraData2,FieldName,FieldCN,FieldName2,FieldCN2,min_value,max_value,status_code)
+[9] 2023-11-06 09:29:20 INSERT INTO a_scheme_rule_temp SELECT id,scheme_name,scheme_id,rule_name,rule_id,layer_name,where_clause,back_field_names,unique_field_name,unique_field_cn,layer_name2,where_clause2,back_field_names2,unique_field_name2,unique_field_cn2,error_desc,param_value,param_values,create_time,update_time,ExtraData,ExtraData2,FieldName,FieldCN,FieldName2,FieldCN2,min_value,max_value,status_code FROM a_scheme_rule
+[9] 2023-11-06 09:29:20 DROP TABLE a_scheme_rule
+[9] 2023-11-06 09:29:20 ALTER TABLE a_scheme_rule_temp RENAME TO a_scheme_rule
+[9] 2023-11-06 09:29:20 AutoMigrate：a_scheme_rule
+[9] 2023-11-06 09:29:20 AutoMigrate：A_File_Storage
+[9] 2023-11-06 09:29:20 CREATE TABLE a_scheme_temp (id,scheme_name,create_time,update_time)
+[9] 2023-11-06 09:29:20 INSERT INTO a_scheme_temp SELECT id,scheme_name,create_time,update_time FROM a_scheme
+[9] 2023-11-06 09:29:20 DROP TABLE a_scheme
+[9] 2023-11-06 09:29:20 ALTER TABLE a_scheme_temp RENAME TO a_scheme
+[9] 2023-11-06 09:29:20 ALTER TABLE a_scheme ADD COLUMN layer_path TEXT
+[9] 2023-11-06 09:29:20 新增表【a_scheme】字段【layer_path】成功
+[9] 2023-11-06 09:29:20 ALTER TABLE a_scheme ADD COLUMN layer_type TEXT
+[9] 2023-11-06 09:29:20 新增表【a_scheme】字段【layer_type】成功
+[9] 2023-11-06 09:29:20 AutoMigrate：a_scheme
+[9] 2023-11-06 09:29:20 AutoMigrate完成 - 2023/11/6 9:29:20

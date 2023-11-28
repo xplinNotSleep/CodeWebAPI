@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>NetTopologySuite.GdalEx</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="GDAL" Version="3.7.1" />
+		<PackageReference Include="GDAL.Native" Version="3.7.1" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NetTopologySuite.Features\NetTopologySuite.Features.csproj" />
+	</ItemGroup>
+</Project>

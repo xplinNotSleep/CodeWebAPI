@@ -1,0 +1,12 @@
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net6.0\AgDataHandle.Maths.deps.json
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net6.0\AgDataHandle.Maths.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\bin\Debug\net6.0\AgDataHandle.Maths.pdb
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.csproj.AssemblyReference.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.GeneratedMSBuildEditorConfig.editorconfig
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.AssemblyInfoInputs.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.AssemblyInfo.cs
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.csproj.CoreCompileInputs.cache
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\refint\AgDataHandle.Maths.dll
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\AgDataHandle.Maths.pdb
+F:\CodeDataCheck\PerDataConvert\AgDataHandle.Base\AgDataHandle.Maths\obj\Debug\net6.0\ref\AgDataHandle.Maths.dll

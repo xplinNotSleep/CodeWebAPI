@@ -1,0 +1,47 @@
+@{
+    ViewBag.Title = "方案表新增";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-Scheme-add">
+                    <div class="form-group col-xs-12">
+                        <label class="row-form-item-label control-label">方案名称:</label>
+                        <div class="row-form-item-content">
+                            <input name="SchemeName" class="form-control" type="text" required>
+                        </div>
+                    </div>
+        <div class="form-group col-xs-12">
+            <label class="row-form-item-label control-label">图层路径:</label>
+            <div class="row-form-item-content">
+                <input name="LayerPath" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+            <label class="row-form-item-label control-label">图层类型:</label>
+            <div class="row-form-item-content">
+                <select name="LayerType" class="form-control">
+                    <option value="shp">shp</option>
+                    <option value="gdb">gdb</option>
+                    <option value="sde">sde</option>
+                 </select>
+            </div>
+        </div>
+    </form>
+</div>
+@section footer{
+<script inline="javascript">
+    $(function(){
+
+    });
+
+    $("#form-Scheme-add").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.apioperate.save("/api/Scheme/create", $('#form-Scheme-add').serializeJson());
+        }
+    }
+</script>
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SqlMap Scope="AgDataHandle.Domain.FileStorageService" xmlns="http://PureData.net/schemas/SqlMap.xsd">
+	<!--文件管理表 查询列名-->
+	<Statements>
+		<!--显示列，尽可能排除大字段列，提高效率-->
+		<Statement Id="FileStorageService_ShowColumns">
+			A.id,
+			A.filename,
+			A.filepath,
+			A.filesize,
+			A.fileextension,
+			A.filetree,
+			A.secret,
+			A.statuscode,
+			A.createuser,
+			A.createtime
+		</Statement>
+	</Statements>
+</SqlMap>

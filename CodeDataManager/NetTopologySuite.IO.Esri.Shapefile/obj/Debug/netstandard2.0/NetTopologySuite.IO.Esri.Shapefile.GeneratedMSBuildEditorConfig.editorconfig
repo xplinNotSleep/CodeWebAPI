@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = NetTopologySuite.IO.Esri
+build_property.ProjectDir = F:\CodeDataCheck\AGSpatialDataCheck\NetTopologySuite.IO.Esri.Shapefile\

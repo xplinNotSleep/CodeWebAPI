@@ -1,0 +1,117 @@
+@{
+    ViewBag.Title = "文件管理表列表";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    @Html.Raw(PureCdn.RenderCss("fileicon.css"))
+    <div class="container-div" style="overflow-y: hidden">
+        <div class="row">
+            <div class="col-sm-12 search-collapse">
+                <form id="formId">
+                    <div class="select-list">
+                        <ul>
+                        <li>
+                         <p>文件名：</p>
+                               <input type="text" name="FileName"/>
+                        </li>
+                        <li>
+                         <p>文件路径：</p>
+                               <input type="text" name="FilePath"/>
+                        </li>
+                        <li style="width:140px">
+                         <p>状态：</p>
+                            <label class="toggle-switch switch-solid">
+                                <input type="checkbox" name="StatusCode">
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                                <a class="btn btn-primary btn-rounded btn-sm" onclick="$.apitable.search()">
+                                    <i class="fa fa-search"></i>&nbsp;搜索
+                                </a>
+                                <a class="btn btn-warning btn-rounded btn-sm" onclick="$.apiform.reset()">
+                                    <i class="fa fa-refresh"></i>&nbsp;重置
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+            </form>
+            </div>
+            <div class="btn-group-sm" id="toolbar" role="group">
+                <a class="btn btn-success" onclick="$.apioperate.add('',800,700)">
+                    <i class="fa fa-plus"></i> 新增
+                </a>
+                <a class="btn btn-danger multiple disabled" onclick="$.apioperate.removeAll()">
+                    <i class="fa fa-remove"></i> 删除
+                </a>
+            </div>
+                <div class="col-sm-12 select-table table-striped">
+                    <table id="bootstrap-table" data-mobile-responsive="true" class="ico-list"></table>
+                </div>
+            </div>
+        </div>
+@section footer{ 
+    <script inline="javascript">
+    $(function () {
+        var options = {
+            method: "get",
+            uniqueId:"Id",
+            contentType: "application/json",
+            url: '/api/FileStorage/getlist',
+            createUrl: '@Url.Action("Add")',
+            updateUrl: '@Url.Action("Edit")?id={id}',
+            detailUrl: '@Url.Action("Detail")?id={id}',
+            removeUrl: '/api/FileStorage/delete/{id}',
+            removeAllUrl:'/api/FileStorage/batch_delete/{ids}',
+            modalName: "文件管理表",
+            pageSize:25,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'Id',
+                    title: 'Id',
+                    visible: false
+                },
+                {
+                    field: 'FileName',
+                    title: '文件名',
+                    sortable: true
+                },
+                {
+                    field: 'FilePath',
+                    title: '文件路径',
+                    sortable: true
+                },
+                {
+                    field: 'FileSize',
+                    title: '文件大小',
+                    sortable: true
+                },
+                {
+                    field: 'FileExtension',
+                    title: '扩展名',
+                    sortable: true
+                },
+                {
+                    field: 'StatusCode',
+                    title: '状态',
+                    sortable: true
+                },
+            {
+                title: '操作',
+                align: 'center',
+                formatter: function (value, row, index) {
+                    var actions = [];
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.edit(\'' + row.Id + '\',800,700)" title="修改"><i class="icon-edit" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.remove(\'' + row.Id + '\')" title="删除"><i class="icon-delete" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                actions.push('<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.detail(\'' + row.Id + '\',800,700)" title="详情"><i class="icon-search" style="border:none;height: 16px;width: 16px;"></i></a> ');
+                  return actions.join('');
+                }
+            }]
+        };
+        $.apitable.init(options);
+
+
+    });
+</script>
+ }

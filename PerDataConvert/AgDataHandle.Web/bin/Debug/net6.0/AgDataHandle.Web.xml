@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgDataHandle.Web</name>
+    </assembly>
+    <members>
+        <member name="M:AgDataHandle.Web.HttpContextExtensions.ApplyCacheProfile(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Mvc.CacheProfile)">
+            <summary>
+            Adds the Cache-Control and Pragma HTTP headers by applying the specified cache profile to the HTTP context.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <param name="cacheProfile">The cache profile.</param>
+            <returns>The HTTP context</returns>
+            <exception cref="T:System.ArgumentNullException">context or cacheProfile.</exception>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam.inputfile">
+            <summary>
+            输入文件全路径，暂时支持sdb
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam.outputpath">
+            <summary>
+            输出文件夹路径
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam.exportSetting">
+            <summary>
+            附加参数，是个json字符串
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam3.inputfile">
+            <summary>
+            输入文件全路径，暂时支持sdb
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam3.exportSetting">
+            <summary>
+            附加参数，是个json字符串
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam2.inputfile">
+            <summary>
+            输入文件全路径，暂时支持sdb
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam2.outputfile">
+            <summary>
+            输出文件
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.RequestParam2.exportSetting">
+            <summary>
+            附加参数，是个json字符串
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam.CentralLongitude">
+            <summary>
+            中央经线
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam2.Proj">
+            <summary>
+            投影字符串,支持Esri、Proj4、ESPGCode、其他Code写法
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam2.TargetProj">
+            <summary>
+            投影字符串,支持Esri、Proj4、ESPGCode、其他Code写法,默认ESPG:4490
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam3.Proj">
+            <summary>
+            投影字符串,支持Esri、Proj4、ESPGCode、其他Code写法
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam3.TargetProj">
+            <summary>
+            投影字符串,支持Esri、Proj4、ESPGCode、其他Code写法,默认ESPG:4490
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Base.ProjectParam3.Points">
+            <summary>
+            所有点
+            </summary>
+        </member>
+        <member name="T:AgDataHandle.Web.Controllers.ConvertController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.To3DTiles(AgDataHandle.Web.Base.RequestParam)">
+            <summary>
+            3d数据格式(sdb等)转成3Dtiles
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.To3DTilesServer(AgDataHandle.Web.Base.RequestParam3)">
+            <summary>
+            3d数据格式(sdb等)转成3Dtiles
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.ToGltf(AgDataHandle.Web.Base.RequestParam2)">
+            <summary>
+            3d数据格式(sdb等)转成3Dtiles
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.UnProject(AgDataHandle.Web.Base.ProjectParam)">
+            <summary>
+            转换国家2000大地坐标为经纬度坐标,中央经线空时默认120
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.UnProjectWgs84ByPrjString(AgDataHandle.Web.Base.ProjectParam2)">
+            <summary>
+            根据esri投影字符串转换坐标，目标投影为空时默认经纬度
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.UnProjectByPrjStringBatch(AgDataHandle.Web.Base.ProjectParam3)">
+            <summary>
+            批量根据esri投影字符串转换坐标，目标投影为空时默认经纬度
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.UnProjectShanghaiCity(AgDataHandle.Maths.Vector2d)">
+            <summary>
+            转换Shanghaicity为经纬度
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.ConvertController.UnProjectShanghaiCityBatch(System.Collections.Generic.IEnumerable{AgDataHandle.Maths.Vector2d})">
+            <summary>
+            批量转换Shanghaicity为经纬度
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AgDataHandle.Web.Controllers.FileStorageController">
+            <summary>
+            FileStorage控制器
+            </summary>
+        </member>
+        <member name="P:AgDataHandle.Web.Controllers.FileStorageController._FileStorageService">
+            <summary>
+            控制器内服务接口
+            </summary>
+        </member>
+        <member name="F:AgDataHandle.Web.Controllers.FileStorageController.UploadPath">
+            <summary>
+            上传文件夹路径
+            </summary>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.#ctor(AgDataHandle.Domain.FileStorageService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="OFileStorageService"></param>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.GetList(AgDataHandle.Domain.FileStorageRequestParam)">
+            <summary>
+            获取列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Get(System.String)">
+            <summary>
+            根据主键获取数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Create(AgDataHandle.Domain.FileStorageEntity)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Put(System.Text.Json.JsonElement)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Patch(System.String,System.Text.Json.JsonElement)">
+            <summary>
+            部分更新数据
+            </summary>
+            <param name="Id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.BatchUpdate(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{AgDataHandle.Domain.FileStorageEntity})">
+            <summary>
+            批量部分更新数据
+            </summary>
+            <param name="Ids"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Delete(System.String)">
+            <summary>
+            根据主键删除数据
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.BatchDelete(System.String)">
+            <summary>
+            根据集合批量删除数据
+            </summary>
+            <param name="Ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Upload(AgDataHandle.Domain.FileStorageUploadRequestParam)">
+            <summary>
+            单文件上传
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgDataHandle.Web.Controllers.FileStorageController.Download(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="id"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

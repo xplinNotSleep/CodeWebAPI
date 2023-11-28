@@ -1,0 +1,474 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Web\\AgDataHandle.Web.csproj": {}
+  },
+  "projects": {
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\AgDataHandle.BaseService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\AgDataHandle.BaseService.csproj",
+        "projectName": "AgDataHandle.BaseService",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\AgDataHandle.BaseService.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\AgDataHandle.Maths.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\AgDataHandle.Maths.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Pure.Ext": {
+              "target": "Package",
+              "version": "[3.0.0.7, )"
+            },
+            "ServiceCenter.Core": {
+              "target": "Package",
+              "version": "[2.0.5.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\AgDataHandle.Maths.csproj": {
+      "version": "1.0.2.1",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\AgDataHandle.Maths.csproj",
+        "projectName": "AgDataHandle.Maths",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\AgDataHandle.Maths.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.Maths\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472",
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          },
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[1.8.10, )"
+            },
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        },
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[1.8.10, )"
+            },
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\AgDataHandle.SdbTo3dtiles.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\AgDataHandle.SdbTo3dtiles.csproj",
+        "projectName": "AgDataHandle.SdbTo3dtiles",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\AgDataHandle.SdbTo3dtiles.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\AgDataHandle.BaseService.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Base\\AgDataHandle.BaseService\\AgDataHandle.BaseService.csproj"
+              },
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DotSpatial.Data": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj",
+        "projectName": "AgDataHandle.BasicDB",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "ServiceCenter.Core": {
+              "target": "Package",
+              "version": "[2.0.5.3, )"
+            },
+            "ServiceCenter.Core.Data": {
+              "target": "Package",
+              "version": "[3.0.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\AgDataHandle.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\AgDataHandle.Domain.csproj",
+        "projectName": "AgDataHandle.Domain",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\AgDataHandle.Domain.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.BasicDB\\AgDataHandle.BasicDB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Web\\AgDataHandle.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Web\\AgDataHandle.Web.csproj",
+        "projectName": "AgDataHandle.Web",
+        "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Web\\AgDataHandle.Web.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://172.18.80.203:8000/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\AgDataHandle.SdbTo3dtiles.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.Convert\\AgDataHandle.SdbTo3dtiles\\AgDataHandle.SdbTo3dtiles.csproj"
+              },
+              "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\AgDataHandle.Domain.csproj": {
+                "projectPath": "F:\\CodeDataCheck\\PerDataConvert\\AgDataHandle.DB\\AgDataHandle.Domain\\AgDataHandle.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "JsonDiffPatch.Net": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Pure.Ext": {
+              "target": "Package",
+              "version": "[3.0.0.7, )"
+            },
+            "ServiceCenter.Core.Aop.Default": {
+              "target": "Package",
+              "version": "[1.0.0.5, )"
+            },
+            "ServiceCenter.Core.NPOI": {
+              "target": "Package",
+              "version": "[1.0.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

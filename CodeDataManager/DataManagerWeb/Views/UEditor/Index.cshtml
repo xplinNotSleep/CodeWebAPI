@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "百度编辑器";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+
+@Html.Raw(PureCdn.RenderJs("ueditor.js"))
+@Html.Raw(PureCdn.RenderJs("home_footer.js"))
+<script type="text/plain" id="editor" style="width:100%;min-height:740px;">
+</script>
+
+<script type="text/javascript">
+     $.cookie('BaseUrl','@ViewBag.Host');
+    var ue = UE.getEditor('editor', {
+        toolbars: [
+            ['source', 'preview', '|', 'undo', 'redo', '|',
+                'paragraph', 'fontfamily', 'fontsize', 'bold', 'italic', 'underline', 'strikethrough', 'forecolor', 'backcolor', '|',
+                'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', '|',
+                'simpleupload', 'insertimage', 'scrawl',
+                //  'insertvideo',
+                //'drafts',
+                'attachment',
+                'inserttable',
+                //'link', 'unlink',
+                '|',
+                'indent', 'lineheight', 'removeformat', 'cleardoc', 'autotypeset']
+        ],
+        enableContextMenu: false,
+        wordCount: false,
+        maximumWords: 1000000
+    });
+
+
+    function getValue() {
+        return $.trim(UE.getEditor('editor').getContent());
+    }
+
+    function setValue(text, isreadonly) {
+        UE.getEditor('editor').ready(function () {
+            UE.getEditor('editor').setContent(text);
+            if (isreadonly) {
+                ue.setDisabled([]);
+            }
+        });
+    }
+</script>

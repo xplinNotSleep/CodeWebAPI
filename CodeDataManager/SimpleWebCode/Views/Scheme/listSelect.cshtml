@@ -1,0 +1,98 @@
+@{
+    ViewBag.Title = "方案表列表";
+    Layout = "~/Views/LayoutPageCommon.cshtml";
+}
+    <div class="container-div" style="overflow-y: hidden">
+        <div class="row">
+            <div class="col-sm-12 search-collapse">
+                <form id="formId">
+                    <div class="select-list">
+                        <ul>
+                        <li>
+                               <p>方案名称：</p>
+                               <input type="text" name="SchemeName"/>
+                        </li>
+                        <li>
+                         <p>图层路径：</p>
+                               <input type="text" name="LayerPath"/>
+                        </li>
+                        <li>
+                         <p>图层类型：</p>
+                             <select name="LayerType" class="form-control">
+                                 <option value="shp">shp</option>
+                                 <option value="gdb">gdb</option>
+                                 <option value="sde">sde</option>
+                              </select>
+                        </li>
+                        <li>
+                                <a class="btn btn-primary btn-rounded btn-sm" onclick="$.apitable.search()">
+                                    <i class="fa fa-search"></i>&nbsp;搜索
+                                </a>
+                                <a class="btn btn-warning btn-rounded btn-sm" onclick="$.apiform.reset()">
+                                    <i class="fa fa-refresh"></i>&nbsp;重置
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+            </form>
+            </div>
+                <div class="col-sm-12 select-table table-striped">
+                    <table id="bootstrap-table" data-mobile-responsive="true" class="ico-list"></table>
+                </div>
+            </div>
+        </div>
+@section footer{ 
+    <script inline="javascript">
+    $(function () {
+        var options = {
+            method: "get",
+            uniqueId:"Id",
+            contentType: "application/json",
+            url: '/api/Scheme/getlist',
+            modalName: "方案表",
+            pageSize:10,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'Id',
+                    title: 'Id',
+                    visible: false
+                },
+                {
+                    field: 'SchemeName',
+                    title: '方案名称',
+                    sortable: true
+                },
+                {
+                    field: 'LayerPath',
+                    title: '图层路径',
+                    sortable: true
+                },
+                {
+                    field: 'LayerType',
+                    title: '图层类型',
+                    sortable: true
+                },
+        {
+        title: '操作',
+        align: 'center',
+        formatter: function(value, row, index) {
+                return '<a class="btn btn-xs" href="javascript:void(0)" onclick="$.apioperate.detail(\'' + row.Id + '\')" title="详情"><i class="icon-search" style="border:none;height: 16px;width: 16px;"></i></a> ';
+            }
+        } 
+    ]
+        };
+        $.apitable.init(options);
+
+    });
+
+    function getselectkey() {
+        return $.apitable.selectColumns('Id');
+    }
+
+    function getselectvalue() {
+        return $.apitable.selectColumns('SchemeName');
+    }
+    </script>
+ }
